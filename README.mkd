@@ -10,7 +10,7 @@ familiarize you with newer HTML5 elements, since the suggested classes work
 within those naming conventions.  Additionally, it will likely enforce pretty
 clean markup, since certain things simply won't look right othwerise.
 
-Check out the source of the example at [http://dotink.github.com/inkling/]
+Check out the source of the example at <http://dotink.github.com/inkling/>
 to get an idea of what you work with.
 
 ## Goals
