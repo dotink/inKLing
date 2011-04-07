@@ -1,0 +1,8 @@
+# Give Your StyleSheets a Clue
+
+inkling is a small CSS "framework" which provides helpful resets, defaults to make your styling faster.
+
+## Goals
+* Keep things as semantic as possible
+* Don't do too much
+* Provide sane defaults and strong suggestions
