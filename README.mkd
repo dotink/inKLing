@@ -1,16 +1,16 @@
 # Give Your StyleSheets a Clue
 
-inkling is a small CSS "framework" which provides helpful resets and defaults to
+inKLing is a small CSS "framework" which provides helpful resets and defaults to
 make your styling faster.  It uses the good ideas from HTML5 (new element names)
 as class names and adds some additional suggested classes with default styling
 that makes many tasks a breeze.
 
-Using and getting accustom to inkling will do a few things.  Firstly, it will
+Using and getting accustom to inKLing will do a few things.  Firstly, it will
 familiarize you with newer HTML5 elements, since the suggested classes work
 within those naming conventions.  Additionally, it will likely enforce pretty
 clean markup, since certain things simply won't look right othwerise.
 
-Check out the source of the example at <http://dotink.github.com/inkling/>
+Check out the source of the example at <http://dotink.github.com/inKLing/>
 to get an idea of what you work with.
 
 ## Goals
