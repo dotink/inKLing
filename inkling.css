@@ -288,9 +288,13 @@ pre, code {
 	Suggested Form styling
 *******************************************************************************/
 
+form {
+	margin-top: 1em;
+}
+
 fieldset {
 	border-width: 0px;
-	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 	fieldset legend {
@@ -298,6 +302,7 @@ fieldset {
 	}
 
 label {
+	font-size: 1.4em;
 	display: block;
 	margin: 1em auto .5em;
 	width: 98%;
@@ -309,11 +314,14 @@ input[type=file],
 textarea {
 	margin-left: 1%;
 	margin-bottom: 1em;
-	width: 96%;
-	padding-left: 1%;
-	padding-right: 1%;
+	width: 90%;
+	padding: 5px;
 	font-size: 1em;
 	font-family: sans-serif;
+	-moz-border-radius: .25em;
+	-webkit-border-radius: .25em;
+	border-radius: .25em;
+	border: solid 1px #666;
 }
 
 select {
@@ -338,16 +346,16 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
-	line-height: 1em;
 	vertical-align: bottom;
 	*vertical-align: baseline;
 }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-	vertical-align: top;
+	vertical-align: center;
 	display: inline;
-	line-height: 1.75em;
+	line-height: 1em;
+	padding-left: 10px;
 }
 
 /*******************************************************************************

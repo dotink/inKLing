@@ -43,6 +43,10 @@
 				background-color: #e0e0e0;
 			}
 
+			#comment .group fieldset {
+				width: 50%;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -188,5 +192,32 @@
 				</li>
 			</ul>
 		</div>
+
+		<form id="comment" action="" method="get">
+			<h3>Form Styling Sucks... Normally</h3>
+			<div class="group">
+				<fieldset>
+					<legend>Your Information</legend>
+					<label>Your Name</label>
+					<input type="text" />
+					<label>Your E-mail</label>
+					<input type="text" />
+					<label>Your Website</label>
+					<input type="text" />
+				</fieldset>
+				<fieldset>
+					<legend>Your Comment</legend>
+					<label>Body</label>
+					<textarea rows="10" cols="60"></textarea>
+				</fieldset>
+			</div>
+			<fieldset class="options">
+				<input type="checkbox" /><label>Notify Me of Updates</label>
+			</fieldset>
+			<fieldset class="actions">
+				<button type="submit">Submit</button>
+			</fieldset>
+		</form>
+
 	</body>
 </html>

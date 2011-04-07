@@ -1,6 +1,9 @@
 # Give Your StyleSheets a Clue
 
-inkling is a small CSS "framework" which provides helpful resets, defaults to make your styling faster.
+inkling is a small CSS "framework" which provides helpful resets and defaults to
+make your styling faster.  It uses the good ideas from HTML5 (new element names)
+as class names and adds some additional suggested classes with default styling
+that makes many tasks a breeze.
 
 ## Goals
 * Keep things as semantic as possible
