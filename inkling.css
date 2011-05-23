@@ -439,15 +439,22 @@ ol.group > li {
 	margin: 0;
 }
 
+ hgroup,
 .hgroup {
 	margin-bottom: 1em;
 }
 
+ hgroup h1,
 .hgroup h1,
+ hgroup h2,
 .hgroup h2,
+ hgroup h3,
 .hgroup h3,
+ hgroup h4,
 .hgroup h4,
+ hgroup h5,
 .hgroup h5,
+ hgroup h6,
 .hgroup h6 {
 	margin-bottom: .10em;
 }
@@ -456,21 +463,29 @@ ol.group > li {
 	Suggested Interface Class Styles
 *******************************************************************************/
 
+ nav ol.group li,
 .nav ol.group li,
+ nav ul.group li,
 .nav ul.group li {
 	margin: 0;
 }
 
+ nav ol,
 .nav ol,
+ nav ul,
 .nav ul {
 	list-style-type: none;
 	display: block;
 	margin: 0;
 }
 
+ nav ol > li,
 .nav ol > li,
+ nav ol > li > a,
 .nav ol > li > a,
+ nav ul > li,
 .nav ul > li,
+ nav ul > li > a,
 .nav ul > li > a {
 	display: block;
 	overflow: hidden;
