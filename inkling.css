@@ -169,11 +169,13 @@ html {
 }
 
 body {
-	font-size: 1.0em;
+	font-size: 1.2em;
+	margin: 0 auto;
+	font-family: sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: .5em 0;
+	margin: 1.5em 0 .5em 0;
 }
 
 h5, h6 {
@@ -285,6 +287,37 @@ pre, code {
 }
 
 /*******************************************************************************
+	Suggested Table styling
+*******************************************************************************/
+
+table {
+	width: 100%;
+	border: solid 1px #222;
+}
+
+th {
+	font-weight: bold;
+	border: solid 1px #222;
+}
+
+th,
+td {
+	vertical-align: top;
+	text-align: center;
+	padding: .5em;
+	border: dotted 1px #222;
+}
+
+tfoot td {
+	border: none;
+}
+
+th:first-child,
+td:first-child {
+	text-align: left;
+}
+
+/*******************************************************************************
 	Suggested Form styling
 *******************************************************************************/
 
@@ -313,13 +346,13 @@ input[type=password],
 input[type=file],
 textarea {
 	display: block;
+	position: relative;
+	left: -2px;
 	margin: 0 auto 1em;
-	width: 95%;
+	width: 96%;
 	padding: 5px;
 	font-size: 1em;
 	font-family: sans-serif;
-	-moz-border-radius: .25em;
-	-webkit-border-radius: .25em;
 	border-radius: .25em;
 	border: solid 1px #666;
 }
