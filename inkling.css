@@ -492,16 +492,16 @@ ol.group > li {
 	margin-bottom: .10em;
 }
 
-h1 + ul > li > h2,
-h2 + ul > li > h3,
-h3 + ul > li > h4,
-h4 + ul > li > h5,
-h5 + ul > li > h6,
-h1 + ol > li > h2,
-h2 + ol > li > h3,
-h3 + ol > li > h4,
-h4 + ol > li > h5,
-h5 + ol > li > h6 {
+h1 + ul > li > h2:first-child,
+h2 + ul > li > h3:first-child,
+h3 + ul > li > h4:first-child,
+h4 + ul > li > h5:first-child,
+h5 + ul > li > h6:first-child,
+h1 + ol > li > h2:first-child,
+h2 + ol > li > h3:first-child,
+h3 + ol > li > h4:first-child,
+h4 + ol > li > h5:first-child,
+h5 + ol > li > h6:first-child {
 	margin-top: 0;
 }
 
