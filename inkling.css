@@ -240,7 +240,7 @@ ul {
 	list-style-type: disc;
 }
 
-ul ul,
+ul ul {
 	list-style-type: circle;
 }
 
