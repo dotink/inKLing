@@ -34,7 +34,6 @@ nav, section, time, mark, audio, video {
 
 article, aside, figure, figcaption, footer, header, hgroup, nav, section {
 	display: block;
-	width: auto;
 }
 
 /**
@@ -225,7 +224,8 @@ h5 + h6 {
 }
 
 li,
-p {
+p,
+figure {
 	margin-bottom: 1.0em;
 }
 
@@ -438,6 +438,10 @@ input[type="radio"] + label {
  * is not a blanket clearfix nor should it be arbitrarily applied as a class
  * to anything which requires a clearfix
  */
+
+.group {
+	clear: both;
+}
 
 .group:after {
 	content: ".";
