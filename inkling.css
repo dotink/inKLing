@@ -34,7 +34,7 @@ nav, section, time, mark, audio, video {
 
 article, aside, figure, figcaption, footer, header, hgroup, nav, section {
 	display: block;
-	width: 100%;
+	width: auto;
 }
 
 /**
