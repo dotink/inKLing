@@ -249,7 +249,7 @@ ol {
 }
 
 ul {
-	list-style-type: disc;
+	list-style: inside disc;
 }
 
 ul ul {
@@ -258,7 +258,7 @@ ul ul {
 }
 
 ol {
-	list-style-type: decimal;
+	list-style: inside decimal;
 }
 
 ol ol {
