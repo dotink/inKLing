@@ -246,25 +246,24 @@ ul,
 ol {
 	font-size: 1.0em;
 	margin-bottom: 1.25em;
-	margin-left: 1.25em;
 }
 
 ul {
+	margin-left: 1.25em;
 	list-style: outside disc;
 }
 
 ul ul {
 	list-style-type: circle;
-	margin-left: 1.25em;
 }
 
 ol {
+	margin-left: 1.5em;
 	list-style: outside decimal;
 }
 
 ol ol {
 	list-style-type: lower-alpha;
-	margin-left: 1.25em;
 }
 
 ul ul,
