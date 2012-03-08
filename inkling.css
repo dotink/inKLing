@@ -533,7 +533,7 @@ ol.group > li {
  */
  hgroup,
 .hgroup {
-	margin-bottom: 1em;
+	margin-bottom: .5em;
 }
 
  hgroup h1,
