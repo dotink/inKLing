@@ -179,8 +179,12 @@ body {
 	font-family: sans-serif;
 }
 
+/**
+ * Headings get bottom margins which end up relative to their font-size, their top margin
+ * will be proportionally smaller as their size increases.
+ */
 h1, h2, h3, h4, h5, h6 {
-	margin: 1.5em 0 .5em 0;
+	margin-bottom: .5em;
 }
 
 h5, h6 {
@@ -189,32 +193,37 @@ h5, h6 {
 
 h1 {
 	font-size: 2.6em;
+	margin-top: .125em;
 }
 
 h2 {
 	font-size:2.2em;
+	margin-top: .25em;
 }
 
 h3 {
 	font-size:1.8em;
+	margin-top: .375em;
 }
 
 h4 {
 	font-size: 1.6em;
+	margin-top: .5em;
 }
 
 h5 {
 	font-size: 1.4em;
+	margin-top: 1.25em;
 }
 
 h6 {
 	font-size: 1.2em;
+	margin-top: 1.5em;
 }
 
 /**
  * Collapse the top margin on direct adjacent sibling
  */
-
 h1 + h2,
 h2 + h3,
 h3 + h4,
@@ -226,13 +235,13 @@ h5 + h6 {
 li,
 p,
 figure {
-	margin-bottom: 1.0em;
+	font-size: 1em;
+	margin-bottom: 2em;
 }
 
 ul,
 ol {
-	font-size: 1.2em;
-	margin-left: 1.5em;
+	font-size: 1.0em;
 	margin-bottom: 1em;
 }
 
@@ -242,6 +251,7 @@ ul {
 
 ul ul {
 	list-style-type: circle;
+	margin-left: 1.25em;
 }
 
 ol {
@@ -250,6 +260,7 @@ ol {
 
 ol ol {
 	list-style-type: lower-alpha;
+	margin-left: 1.25em;
 }
 
 ul ul,
@@ -261,12 +272,11 @@ ol ul {
 }
 
 p {
-	font-size: 1.2em;
 	line-height: 1.5em;
 }
 
 li p {
-	font-size: 1.0em;
+	font-size: 1em;
 }
 
 a {
@@ -364,11 +374,11 @@ fieldset {
 }
 
 	fieldset legend {
-		font-size: 1.8em;
+		font-size: 1.5em;
 	}
 
 label {
-	font-size: 1.4em;
+	font-size: 1.25em;
 	display: block;
 	margin: 1em auto .5em;
 	width: 98%;
@@ -500,6 +510,9 @@ ol ol {
 	list-style-type: lower-alpha;
 }
 
+/**
+ * Grouped lists get no left margin unlike our standard bullet lists
+ */
 ul.group,
 ol.group {
 	list-style-type: none;
@@ -511,9 +524,13 @@ ol.group > li {
 	margin: 0;
 }
 
+/**
+ * Add bottom margin to an hgroup as a whole, and rremove nearly all bottom margin on the grouped
+ * headings.
+ */
  hgroup,
 .hgroup {
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
 
  hgroup h1,
@@ -531,6 +548,9 @@ ol.group > li {
 	margin-bottom: .10em;
 }
 
+/**
+ * Collapse the top margin on headers within a list if directly preceded by a header
+ */
 h1 + ul > li > h2:first-child,
 h2 + ul > li > h3:first-child,
 h3 + ul > li > h4:first-child,
@@ -577,5 +597,87 @@ h5 + ol > li > h6:first-child {
 	text-decoration: none;
 }
 
+/*******************************************************************************
+	Suggested Structural Styles
+*******************************************************************************/
+
+/**
+ * A standard group will have two direct child divs, split 75 / 25
+ */
+.group {}
+
+	.group > div {
+		width: 75%;
+	}
+
+	.group > div.aside {
+		width: 25%;
+	}
+
+/**
+ * A featurette group will have two direct child divs, split 50 / 50
+ */
+.featurette.group {}
+
+	.featurette.group > div {
+		width: 50%;
+	}
+
+/**
+ * A brochure group will have three direct child divs, split 33 / 33 / 33
+ */
+.brochure.group {}
+
+	.brochure.group > div {
+		width: 33%;
+	}
+
+/**
+ * A brochure group will have four direct child divs, split 25 / 25 / 25 / 25
+ */
+.catalogue.group {}
+
+	.catalogue.group > div {
+		width: 25%;
+	}
+
+/**
+ * And introduction group will have two direct child divs, firstly a textual description area and
+ * secondly a figure at 60 / 40
+ */
+.introduction.group {}
+
+	.introduction.group > .description {
+		width: 60%;
+	}
+
+	.introduction.group > div.figure {
+		width: 40%;
+	}
+
+/**
+ * Article groups will have at least two direct child divs, spit 75 / 25, however, the first,
+ * a table of contents will preced the body of the article.  Footnotes and index sections by
+ * default will be 100% and should follow the body.
+ */
+.article.group {}
+
+	.article.group > div.toc,
+	.article.group > div.aside {
+		width: 25%;
+		float: right;
+	}
+
+	.article.group > div.body {
+		width: 75%;
+		float: left;
+	}
+
+	.article.group > div.footnotes,
+	.article.group > div.index
+	 {
+		width: 100%;
+		clear: both;
+	}
 
 
