@@ -129,6 +129,10 @@ table {
 
 .required   { /** A required input element on a form **/                       }
 
+.missing    { /** A require elements which is missing on a form **/            }
+
+.important  { /** Elements who need to standout among same-typed elements **/  }
+
 /*******************************************************************************
 	Suggested Messaging Class Names (4)
 *******************************************************************************/
@@ -162,7 +166,7 @@ table {
 .thumbnail { /** On any thumbnail image **/                                    }
 
 /*******************************************************************************
-	Suggested Basic Styling
+	Suggested Basic Styles
 *******************************************************************************/
 
 html {
@@ -174,7 +178,7 @@ html {
 }
 
 body {
-	font-size: 1.4em;
+	font-size: 1.0em;
 	margin: 0 auto;
 	font-family: sans-serif;
 }
@@ -192,44 +196,33 @@ h5, h6 {
 }
 
 h1 {
-	font-size: 2.6em;
-	margin-top: .25em;
+	font-size: 3.0em;
+	margin-top: 1em;
 }
 
 h2 {
-	font-size:2.2em;
-	margin-top: .75em;
+	font-size: 2.6em;
+	margin-top: .54em;
 }
 
 h3 {
-	font-size:1.8em;
-	margin-top: 1.25em;
+	font-size: 1.8em;
+	margin-top: 1.22em;
 }
 
 h4 {
 	font-size: 1.6em;
-	margin-top: 1.50em;
+	margin-top: 1.5em;
 }
 
 h5 {
 	font-size: 1.4em;
-	margin-top: 1.75em;
+	margin-top: 1.86em;
 }
 
 h6 {
 	font-size: 1.2em;
-	margin-top: 2em;
-}
-
-/**
- * Collapse the top margin on direct adjacent sibling
- */
-h1 + h2,
-h2 + h3,
-h3 + h4,
-h4 + h5,
-h5 + h6 {
-	margin-top: 0;
+	margin-top: 2.3em;
 }
 
 p,
@@ -244,13 +237,14 @@ li {
 
 ul,
 ol {
-	font-size: 1.0em;
-	margin-bottom: 1.25em;
+	font-size: 1em;
+	margin-bottom: 1em;
+	list-style-position: outside;
 }
 
 ul {
 	margin-left: 1.25em;
-	list-style: outside disc;
+	list-style: disc;
 }
 
 ul ul {
@@ -324,6 +318,10 @@ sub {
 	-webkit-text-size-adjust: inherit;
 }
 
+pre {
+	margin-bottom: 1em;
+}
+
 pre,
 pre code {
 	overflow-x: auto;
@@ -334,7 +332,7 @@ pre, code, kbd, samp {
 }
 
 /*******************************************************************************
-	Suggested Table styling
+	Suggested Basic Table styling
 *******************************************************************************/
 
 table {
@@ -365,12 +363,10 @@ td:first-child {
 }
 
 /*******************************************************************************
-	Suggested Form styling
+	Suggested Basic Form styling
 *******************************************************************************/
 
-form {
-	margin-top: 1em;
-}
+form {}
 
 fieldset {
 	border-width: 0px;
@@ -378,24 +374,40 @@ fieldset {
 }
 
 	fieldset legend {
-		font-size: 1.5em;
+		font-size: 1.4em;
 	}
 
 label {
-	font-size: 1.25em;
 	display: block;
-	margin: 1em auto .5em;
-	width: 98%;
+	position: relative;
+	margin: .75em 0 .25em;
+	font-size: 1.2em;
+	line-height: 1em;
 }
 
+/**
+ * Because our inputs mix a % width and pixel padding+border, the size of the parent container
+ * will determine how tight these look.  Our padding and border is 12px by default, the width is
+ * 96%.  This means that the ideal width is 12 / .04 (or 300px).  For containers larger or smaller
+ * you should need only to increase or decrease with width percentage to achieve pixel perfection,
+ * if that's your thing.
+ *
+ * .custom_fieldset input[type=text] {
+ *     width: 92%; - Would be good for 150px fielsets
+ *     width: 98%; - Would be good for 600px fieldsets
+ *     width: x;   - Anything other outside of 150px - 600px fieldsets should probably not be used
+ * }
+ *
+ * The simple formula: (1 - ([padding + border] / [pixel width])) * 100 = [percent width]
+ *
+ */
 input[type=text],
 input[type=password],
 input[type=file],
 textarea {
 	display: block;
 	position: relative;
-	left: -2px;
-	margin: 0 auto 1em;
+	margin-bottom: 1em;
 	width: 96%;
 	padding: 5px;
 	font-size: 1em;
@@ -430,16 +442,19 @@ input[type="checkbox"] {
 	*vertical-align: baseline;
 }
 
+/**
+ * If we've put a label after a checkbox, we assume it is for that checkbox, as this is common.
+ * In these cases we inline the label and give it a fixed margin to come off the checkbox.
+ */
 input[type="checkbox"] + label,
-input[type="radio"] + label {
-	vertical-align: center;
+input[type="radio"]    + label {
 	display: inline;
-	line-height: 1em;
-	padding-left: 10px;
+	line-height: 1.3em;
+	margin-left: 10px;
 }
 
 /*******************************************************************************
-	Suggested Structural Class Styles
+	Suggested Basic Structural Classes
 *******************************************************************************/
 
 .container {
@@ -452,7 +467,6 @@ input[type="radio"] + label {
  * is not a blanket clearfix nor should it be arbitrarily applied as a class
  * to anything which requires a clearfix
  */
-
 .group {
 	clear: both;
 }
@@ -463,6 +477,7 @@ input[type="radio"] + label {
 	height: 0;
 	clear: both;
 	visibility: hidden;
+	overflow: hidden; /* Fixes some outline bugs */
 }
 
 * html .group {
@@ -474,23 +489,25 @@ input[type="radio"] + label {
 }
 
 /**
- * Grouped Sections, List Items, or Fieldsets are floated together
+ * Grouped Divs, List Items, or Fieldsets are floated together
  */
 
-.group > li,
 .group > div,
-.group > fieldset,
-.group > section {
+.group > li,
+.group > fieldset {
 	float: left;
 }
 
 /**
- * Contained Grouped Sections take the shape of their container, this can create
- * equal length columns quite easily, however there are a few caveats
+ * Contained Grouped Sections take the shape of their container, this can create the appearance of
+ * equal length columns quite easily, however there are a few caveats:
  *
  * 1) Bottom borders will not be seen
- * 2) In some cases with absolutely position elements this can cause weird
- *    issues where content below the unseen padding cannot be clicked
+ * 2) The height of the element is not actually larger, so attempting to bottom position an element
+ *    within them will result in failure.
+ * 3) In some cases with absolutely position elements this can cause weird
+ *    issues where content below the unseen padding cannot be clicked, using z-indexing may help
+ *    but may cause additional weirdness depending on design.
  *
  */
 
@@ -519,24 +536,18 @@ ol ol {
  */
 ul.group,
 ol.group {
-	list-style-type: none;
 	margin-left: 0;
 }
 
-ul.group > li,
-ol.group > li {
+.group > li,
+.group > li {
+	list-style-type: none;
 	margin: 0;
 }
 
 /**
- * Add bottom margin to an hgroup as a whole, and rremove nearly all bottom margin on the grouped
- * headings.
+ * Remove all margin on hgrouped headings.  The margin should be on the hgroup itself.
  */
- hgroup,
-.hgroup {
-	margin: 2em 0 .5em 0;
-}
-
  hgroup h1,
 .hgroup h1,
  hgroup h2,
@@ -549,11 +560,20 @@ ol.group > li {
 .hgroup h5,
  hgroup h6,
 .hgroup h6 {
-	margin-bottom: .10em;
+	margin: 0;
 }
 
 /**
- * Collapse the top margin on headers within a list if directly preceded by a header
+ * Set the default hgroup margin.
+ */
+ hgroup,
+.hgroup {
+	margin: 3em auto 1em;
+}
+
+/**
+ * Collapse the top margin on headers within a list if the list was directly preceded by another
+ * header.
  */
 h1 + ul > li > h2:first-child,
 h2 + ul > li > h3:first-child,
@@ -569,41 +589,45 @@ h5 + ol > li > h6:first-child {
 }
 
 /*******************************************************************************
-	Suggested Interface Class Styles
+	Expanded Structural Classes and Styles
 *******************************************************************************/
 
- nav ol.group li,
-.nav ol.group li,
- nav ul.group li,
-.nav ul.group li {
-	margin: 0;
+/**
+ * Sections should always contain one or more heading elements.  A good rule of thumb is to add
+ * a secton right before any heading element or hgroup element.  For a simple document with no
+ * floating this will produce a very nice subtle indented look for each section.  For grouped
+ * elements this will create a 20px gutter.
+ */
+.section,
+section {
+	padding: 10px;
 }
 
- nav ol,
-.nav ol,
- nav ul,
-.nav ul {
-	list-style-type: none;
-	display: block;
-	margin: 0;
+/**
+ * It is very common to apply borders to grouped sections to separate them in addition to the
+ * gutter.  When this is done it should always be a left border or top border.  This allows
+ * the use of the :first-child pseudo-selector, which is better supported than :last-child to
+ * be used to remove the border on the lead element.  The suggest class .first is used as a
+ * fallback.
+ */
+.group > div      > .section:first-child,
+.group > li       > .section:first-child,
+.group > fieldset > .section:first-child,
+.group > div      > .section.first,
+.group > li       > .section.first,
+.group > fieldset > .section.first {
+	border-left: 0;
 }
 
- nav ol > li,
-.nav ol > li,
- nav ol > li > a,
-.nav ol > li > a,
- nav ul > li,
-.nav ul > li,
- nav ul > li > a,
-.nav ul > li > a {
-	display: block;
-	overflow: hidden;
-	text-decoration: none;
-}
-
-/*******************************************************************************
-	Suggested Structural Styles
-*******************************************************************************/
+/**
+ * The classes which follow allow for various group types to be defined fairly easily.  It is
+ * important to remember that grouped elements by default will float left, and depending on how
+ * you structure the internal divs of these classes they may get caught on a previous left floated
+ * element whose height is higher than their direct predecessor.  Although these classes indicate
+ * width, and thus, how many child divs should fit in the parent group types, there is no
+ * :nth-child() clear magic.  This is so that such bugs do not get overlooked in older browsers
+ * that don't support that pseudo selector.
+ */
 
 /**
  * A standard group will have two direct child divs, split 75 / 25
@@ -611,11 +635,11 @@ h5 + ol > li > h6:first-child {
 .group {}
 
 	.group > div {
-		width: 75%;
+		width: 70%;
 	}
 
 	.group > div.aside {
-		width: 25%;
+		width: 30%;
 	}
 
 /**
@@ -668,12 +692,12 @@ h5 + ol > li > h6:first-child {
 
 	.article.group > div.toc,
 	.article.group > div.aside {
-		width: 25%;
+		width: 30%;
 		float: right;
 	}
 
 	.article.group > div.body {
-		width: 75%;
+		width: 70%;
 		float: left;
 	}
 
@@ -683,5 +707,30 @@ h5 + ol > li > h6:first-child {
 		width: 100%;
 		clear: both;
 	}
+
+/*******************************************************************************
+	Expanded Interface Classes and Styles
+*******************************************************************************/
+
+ nav ol,
+.nav ol,
+ nav ul,
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+ nav ol > li,
+.nav ol > li,
+ nav ol > li > a,
+.nav ol > li > a,
+ nav ul > li,
+.nav ul > li,
+ nav ul > li > a,
+.nav ul > li > a {
+	display: block;
+	overflow: hidden;
+	text-decoration: none;
+}
 
 
