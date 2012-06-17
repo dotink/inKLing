@@ -43,8 +43,8 @@
 				background-color: #e0e0e0;
 			}
 
-			#comment .group fieldset {
-				width: 50%;
+			.section {
+				padding: 10px;
 			}
 
 		</style>
@@ -204,20 +204,24 @@
 
 		<form id="comment" action="" method="get">
 			<h3>Form Styling Sucks... Normally</h3>
-			<div class="group">
+			<div class="featurette group">
 				<fieldset>
-					<legend>Your Information</legend>
-					<label>Your Name</label>
-					<input type="text" />
-					<label>Your E-mail</label>
-					<input type="text" />
-					<label>Your Website</label>
-					<input type="text" />
+					<div class="section">
+						<legend>Your Information</legend>
+						<label>Your Name</label>
+						<input type="text" />
+						<label>Your E-mail</label>
+						<input type="text" />
+						<label>Your Website</label>
+						<input type="text" />
+					</div>
 				</fieldset>
 				<fieldset>
-					<legend>Your Comment</legend>
-					<label>Body</label>
-					<textarea rows="10" cols="60"></textarea>
+					<div class="section">
+						<legend>Your Comment</legend>
+						<label>Body</label>
+						<textarea rows="10" cols="60"></textarea>
+					</div>
 				</fieldset>
 			</div>
 			<fieldset class="options">
