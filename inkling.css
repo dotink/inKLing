@@ -1,0 +1,828 @@
+/*-------------------------------------------------------------------------------------------------
+ | inkling is a reset, default, and opinionated/suggestive stylesheet for rapid interface
+ | development.  Please note, this stylesheet does not like IE6.  While you may get away with it
+ | using something like IE7.js, it is suggested you just let it die.
+ |
+ |
+ | @author Matthew J. Sahagian [mjs] <gent@dotink.org>
+ | @copyright Copyright (c) 2011, Matthew J. Sahagian
+ | @license http://www.gnu.org/licenses/agpl.html GNU Affero General Public License
+ |
+ | @package inkling
+ *-----------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------
+ | Copy and paste this comment for easy block comments
+ *-----------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------
+ | Web Font Import
+ *-----------------------------------------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
+/*------------------------------------------------------------------------------------------------
+ | Reset
+ *-----------------------------------------------------------------------------------------------*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, kbd, q, s,
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td, article, aside, figure, figcaption, footer, header, hgroup, menu,
+nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	border-width: 0;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+article, aside, figure, figcaption, footer, header, hgroup, nav, section {
+	display: block;
+}
+
+a img{
+	border-width: 0px;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------------------------------------------------------------------------------------
+ |	Suggested Structural Class Names (5)
+ *-----------------------------------------------------------------------------------------------*/
+
+.header       { /** A header for the page or a particular section **/          }
+
+.hgroup       { /** A group of headings **/                                    }
+
+.principal    { /** Used to indicate the "main" focus of a page **/            }
+
+.supplemental { /** Added content not necessarily related to principal **/     }
+
+.container    { /** A literal container of sections or groups **/              }
+
+.group        { /** Applied to any conceptually grouped sections or items **/  }
+
+.section      { /** For sectional division of a page or existing section **/   }
+
+.aside        { /** For side content related to sibling sections **/           }
+
+.footer       { /** A footer for the page or a particular section **/          }
+
+/*------------------------------------------------------------------------------------------------
+ |	Suggested Interface Class Names (3)
+ *-----------------------------------------------------------------------------------------------*/
+
+.nav          { /** On any element providing a navigation area **/             }
+
+.search       { /** On any element providing a search area or search field **/ }
+
+.action       { /** Used to indicate action links in an item context   **/     }
+
+/*------------------------------------------------------------------------------------------------
+ | Suggested Importance Class Names (5)
+ *-----------------------------------------------------------------------------------------------*/
+
+.primary      { /** The first of similar elements with inequal priority **/    }
+
+.secondary    { /** The second of similar elements with inequal priority **/   }
+
+.tertiary     { /** The third of similar elements with inequal priority **/    }
+
+.quaternary   { /** The fourth of similar elements with inequal priority **/   }
+
+.quinary      { /** The fifth of similar elements with inequal priority **/    }
+
+/*------------------------------------------------------------------------------------------------
+ | Suggested Positioning Class Names (4)
+ *-----------------------------------------------------------------------------------------------*/
+
+.first        { /** The first of similar elements with equal priority **/      }
+
+.last         { /** The last of similar elements with equal priority **/       }
+
+.odd          { /** Odd elements in a series of elements **/                   }
+
+.even         { /** Even elements in a series of elements **/                  }
+
+/*------------------------------------------------------------------------------------------------
+ |	Suggested Highlighting Class Names (6)
+ *-----------------------------------------------------------------------------------------------*/
+
+.featured     { /** Highlight a piece of content which is featured **/         }
+
+.active       { /** Highlight elements leading to the current content **/      }
+
+.required     { /** Highlight a required piece of submission input **/         }
+
+.missing      { /** Highlight a missing piece of input from a submission **/   }
+
+.important    { /** Highlight elements which need to stand out **/             }
+
+.suggested    { /** The suggested action among one or more (buttons) **/       }
+
+/*------------------------------------------------------------------------------------------------
+ |	Suggested Messaging Class Names (4)
+ *-----------------------------------------------------------------------------------------------*/
+
+.notice    { /** Callouts giving more information about submission input **/   }
+
+.helper    { /** Callouts explicitly helping a user with submission input **/  }
+
+.error     { /** A notification of failed submission input **/                 }
+
+.success   { /** A notification of successful submission input **/             }
+
+.warning   { /** A warning based on submission input **/                       }
+
+.alert     { /** A response to user submission requiring additional action **/ }
+
+/*------------------------------------------------------------------------------------------------
+ |	Suggested Data Class Names (7)
+ *-----------------------------------------------------------------------------------------------*/
+
+.dialog    { /** On any element providing a conversation (suggest: dl) **/     }
+
+.article   { /** On any element providing syndicatable news-like content **/   }
+
+.profile   { /** On any element providing biographical content **/             }
+
+.product   { /** On any element providing info on an item for sale **/         }
+
+.event     { /** On any element providing time sensitive occurence info **/    }
+
+.project   { /** On any element providing information on an est. goal **/      }
+
+.brief     { /** On any element providing incomplete content **/               }
+
+.thumbnail { /** On any thumbnail image **/                                    }
+
+
+/*------------------------------------------------------------------------------------------------
+ | Structures
+ *-----------------------------------------------------------------------------------------------*/
+
+.container {
+	overflow: hidden;
+	margin-bottom: 2em;;
+}
+
+.group {
+	clear: both;
+}
+
+.group:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+* html .group {
+	height: 1%;
+}
+
+*:first-child+html .group {
+	min-height: 1px;
+}
+
+.group > li,
+.group > div,
+.group > aside,
+.group > fieldset {
+	float: left;
+}
+
+ul.group,
+ol.group {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.group > li {
+	margin-left: 0;
+}
+
+.container.group > li,
+.container.group > div,
+.container.group > aside,
+.container.group > fieldset {
+	padding-bottom: 5000px;
+	margin-bottom: -5000px;
+}
+
+
+/*------------------------------------------------------------------------------------------------
+ | Extended Structures
+ *-----------------------------------------------------------------------------------------------*/
+
+.group > li > section,
+.group > li > .section,
+.group > div > section,
+.group > div > .section,
+.group > aside > section,
+.group > aside > .section,
+.group > fieldset > section,
+.group > fieldset > .section {
+	padding: 0 1em;
+}
+
+ol.group > li > section p:last-child,
+ul.group > li > section p:last-child {
+	margin-bottom: 0;
+}
+
+.group > li.first > section,
+.group > li.first > .section,
+.group > li:first-child > section,
+.group > li:first-child > .section,
+
+.group > div.first > section,
+.group > div.first > .section,
+.group > div:first-child > section,
+.group > div:first-child > .section,
+
+.group > fieldset.first > section,
+.group > fieldset.first > .section,
+.group > fieldset:first-child > section,
+.group > fieldset:first-child > .section {
+
+	padding-left: 0;
+	border-left: 0;
+}
+
+.group > div.last > section,
+.group > div.last > .section,
+.group > div:last-child > section,
+.group > div:last-child > .section,
+
+.group > li.last > section,
+.group > li.last > .section,
+.group > li:last-child > section,
+.group > li:last-child > .section,
+
+.group > fieldset.last > section,
+.group > fieldset.last > .section,
+.group > fieldset:last-child > section,
+.group > fieldset:last-child > .section {
+
+	padding-right: 0;
+	border-right: 0;
+}
+
+.container.group > li > section,
+.container.group > li > .section,
+.container.group > div > section,
+.container.group > div > .section,
+.container.group > aside > section,
+.container.group > aside > .section,
+.container.group > fieldset > section,
+.container.group > fieldset > .section {
+	padding: 1em;
+}
+
+.group { /** Split 70/30 **/ }
+
+	.group > .principal {
+		width: 70%;
+	}
+
+	.group > aside,
+	.group > .aside {
+		width: 30%;
+	}
+
+.featurette.group { /** Split 50/50 **/ }
+
+	.featurette.group > li,
+	.featurette.group > div,
+	.featurette.group > fieldset {
+		width: 50%;
+	}
+
+.brochure.group { /** Split 33/33/33 **/ }
+
+	.brochure.group > li,
+	.brochure.group > div,
+	.brochure.group > fieldset {
+		width: 33%;
+	}
+
+.catalogue.group { /** Split 25/25/25/25 **/ }
+
+	.catalogue.group > li,
+	.catalogue.group > div,
+	.catalogue.group > fieldset {
+		width: 25%;
+	}
+
+
+/*------------------------------------------------------------------------------------------------
+ |	Suggested Basic Styling and Fixes
+ *-----------------------------------------------------------------------------------------------*/
+
+html {
+	font-size: 16px;
+	overflow-y: scroll;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-size: 1.0em;
+	margin: 0 auto;
+	font-family: Oxygen, sans-serif;
+}
+
+
+p {
+	line-height: 1.5em;
+}
+
+p,
+figure {
+	font-size: 1em;
+	margin-bottom: 2em;;
+}
+
+li {
+	margin-bottom: .5em;
+}
+
+ul,
+ol {
+	font-size: 1em;
+	margin-bottom: 2em;;
+	list-style-position: outside;
+}
+
+ul {
+	margin-left: 1.25em;
+	list-style: disc;
+}
+
+ul ul {
+	list-style-type: circle;
+}
+
+ol {
+	margin-left: 1.5em;
+	list-style: outside decimal;
+}
+
+ol ol {
+	list-style-type: lower-alpha;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-top: .5em;
+	margin-bottom: .5em;
+	font-size: 1em;
+}
+
+li p {
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+img, * img {
+	image-rendering: optimizeQuality;
+	-ms-interpolation-mode: bicubic;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: inherit;
+}
+
+pre {
+	margin-bottom: 2em;;
+}
+
+pre,
+pre code {
+	overflow-x: auto;
+}
+
+pre, code, kbd, samp {
+	font-family: FakeMonoSpaceFont, monospace;
+}
+
+
+/*------------------------------------------------------------------------------------------------
+ | Headings
+ *-----------------------------------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 100%;
+	font-weight: bold;
+}
+
+h1, h2, h3 {
+	color: #444;
+}
+
+h1 {
+	font-size: 3em;
+	margin-top: 0;
+	margin-bottom: .333em;
+}
+
+h2 {
+	font-size: 2.75em;
+	margin-top: .091em;
+	margin-bottom: .364em;
+}
+
+h3 {
+	font-size: 2.25em;
+	margin-top: .333em;
+	margin-bottom: .447em;
+}
+
+h4 {
+	font-size: 1.75em;
+	margin-top: .666em;
+	margin-bottom: .630em;
+}
+
+h5 {
+	font-size: 1.50em;
+	margin-top: 1em;
+	margin-bottom: .674em;
+}
+
+h6 {
+	font-size: 1.25em;
+	margin-top: 1.4em;
+	margin-bottom: .815em;
+}
+
+
+/*------------------------------------------------------------------------------------------------
+ | Tables
+ *-----------------------------------------------------------------------------------------------*/
+
+table {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+th {
+	font-weight: bold;
+	border: solid 1px #222;
+}
+
+th,
+td {
+	vertical-align: top;
+	padding: .5em;
+	border: dotted 1px #222;
+	text-align: left;
+}
+
+th {
+	border: solid 1px #888;
+}
+
+tfoot td {
+	border: none;
+}
+
+/*------------------------------------------------------------------------------------------------
+ | Forms
+ *-----------------------------------------------------------------------------------------------*/
+
+form {}
+
+fieldset {
+	border-width: 0px;
+	margin-bottom: 1em;
+}
+
+	fieldset legend {
+		font-size: 1.4em;
+	}
+
+label {
+	display: block;
+	position: relative;
+	margin: .75em 0 .25em;
+	font-size: 1.2em;
+	line-height: 1em;
+}
+
+/**
+ * Because our inputs mix a % width and pixel padding+border, the size of the parent container
+ * will determine how tight these look.  Our padding and border is 12px by default, the width is
+ * 96%.  This means that the ideal width is 12 / .04 (or 300px).  For containers larger or smaller
+ * you should need only to increase or decrease with width percentage to achieve pixel perfection,
+ * if that's your thing.
+ *
+ * .custom_fieldset input[type=text] {
+ *     width: 92%; - Would be good for 150px fielsets
+ *     width: 98%; - Would be good for 600px fieldsets
+ *     width: x;   - Anything other outside of 150px - 600px fieldsets should probably not be used
+ * }
+ *
+ * The simple formula: (1 - ([padding + border] / [pixel width])) * 100 = [percent width]
+ *
+ * NOTE: Browsers supporting css calc() will fit their container.
+ */
+input[type=text],
+input[type=password],
+input[type=file],
+textarea {
+	display: block;
+	position: relative;
+	margin-bottom: 1em;
+	width: 96%;
+	padding: 5px;
+	width: -moz-calc(100% - 16px);
+	padding: -moz-calc(7px);
+	width: calc(100% - 16px);
+	padding: calc(7px);
+	font-size: 1em;
+	font-family: sans-serif;
+	border-radius: .25em;
+	border: solid 1px #666;
+}
+
+select {
+	margin-bottom: .5em;
+	border-radius: .25em;
+	border: solid 1px #666;
+	padding: 3px 3px 2px;
+	font-size: .95em;
+}
+
+option {
+	padding: 3px 6px;
+	font-size: .95em;
+}
+
+button {
+	padding: 5px;
+	margin: 1em 0;
+	border-radius: .25em;
+	border: solid 1px #666;
+	background-color: #fff;
+	font-size: 1em;
+}
+
+input[type=button],
+input[type=submit],
+button {
+	cursor: pointer;
+}
+
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+	vertical-align: bottom;
+	*vertical-align: baseline;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+	display: inline;
+	line-height: 1.3em;
+	margin-left: 10px;
+}
+
+
+/*------------------------------------------------------------------------------------------------
+ | Extended Styles
+ *-----------------------------------------------------------------------------------------------*/
+
+ul ul {
+	list-style-type: circle;
+}
+
+ol ol {
+	list-style-type: lower-alpha;
+}
+
+/*------------------------------------------------------------------------------------------------
+ | Extended Headings
+ *-----------------------------------------------------------------------------------------------*/
+
+ hgroup > h1:first-child,
+ hgroup > h2:first-child,
+ hgroup > h3:first-child,
+ hgroup > h4:first-child,
+ hgroup > h5:first-child,
+ hgroup > h6:first-child,
+.hgroup > h1:first-child,
+.hgroup > h2:first-child,
+.hgroup > h3:first-child,
+.hgroup > h4:first-child,
+.hgroup > h5:first-child,
+.hgroup > h6:first-child {
+ 	margin-bottom: 0;
+ }
+
+ hgroup h1 + h2,
+ hgroup h2 + h3,
+ hgroup h3 + h4,
+ hgroup h4 + h5,
+ hgroup h5 + h6,
+.hgroup h1 + h2,
+.hgroup h2 + h3,
+.hgroup h3 + h4,
+.hgroup h4 + h5,
+.hgroup h5 + h6 {
+	margin-top: 0;
+}
+
+h1 + .group > * > h2:first-child,
+h2 + .group > * > h3:first-child,
+h3 + .group > * > h4:first-child,
+h4 + .group > * > h5:first-child,
+h5 + .group > * > h6:first-child,
+h1 + .group > * > section > h2:first-child,
+h2 + .group > * > section > h3:first-child,
+h3 + .group > * > section > h4:first-child,
+h4 + .group > * > section > h5:first-child,
+h5 + .group > * > section > h6:first-child,
+h1 + .group > * > .section > h2:first-child,
+h2 + .group > * > .section > h3:first-child,
+h3 + .group > * > .section > h4:first-child,
+h4 + .group > * > .section > h5:first-child,
+h5 + .group > * > .section > h6:first-child {
+	margin-top: 0;
+}
+
+
+/*------------------------------------------------------------------------------------------------
+ | Navigation Styles (for use with bullet-proof nav)
+ |
+ |
+ | <nav>
+ |     <ul class="primary">
+ |         <li>...</li>
+ |         <li>
+ |             <a href="#">...</a>
+ |             <ul>
+ |                 <li>...</li>
+ |             </ul>
+ |         </li>
+ |     </ul>
+ | </nav>
+ |
+ *-----------------------------------------------------------------------------------------------*/
+
+ nav a,
+.nav a {
+	text-decoration: none;
+	display: block;
+	padding: .5em 1em;
+}
+
+ nav ol,
+ nav ul,
+.nav ol,
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+ nav > ol > li,
+ nav > ul > li,
+.nav > ol > li,
+.nav > ul > li {
+	overflow: hidden;
+}
+
+ nav > ol > li > ol,
+ nav > ol > li > ul,
+ nav > ul > li > ol,
+ nav > ul > li > ul,
+.nav > ol > li > ol,
+.nav > ol > li > ul,
+.nav > ul > li > ol,
+.nav > ul > li > ul {
+	position: absolute;
+	left: 0;
+}
+
+/*---- UNCOMMENT FOR HORIZONTAL SUBNAV
+
+	 nav > ol,
+	 nav > ul,
+	.nav > ol,
+	.nav > ul {
+		position: relative;
+	}
+
+	 nav > ol > li > ol,
+	 nav > ol > li > ul,
+	 nav > ul > li > ol,
+	 nav > ul > li > ul,
+	.nav > ol > li > ol,
+	.nav > ol > li > ul,
+	.nav > ul > li > ol,
+	.nav > ul > li > ul {
+		with: 100%;
+	}
+
+ *----/
+
+/*---- UNCOMMENT FOR VERTICAL SUBNAV
+
+	 nav > ol > li,
+	 nav > ul > li,
+	.nav > ol > li,
+	.nav > ul > li {
+		position: relative;
+	}
+
+	 nav > ol > li > ol > li,
+	 nav > ol > li > ul > li,
+	 nav > ul > li > ol > li,
+	 nav > ul > li > ul > li,
+	.nav > ol > li > ol > li,
+	.nav > ol > li > ul > li,
+	.nav > ul > li > ol > li,
+	.nav > ul > li > ul > li {
+		with: 100%;
+	}
+
+
+	 nav > ol > li > ol > li > a,
+	 nav > ol > li > ul > li > a,
+	 nav > ul > li > ol > li > a,
+	 nav > ul > li > ul > li > a,
+	.nav > ol > li > ol > li > a,
+	.nav > ol > li > ul > li > a,
+	.nav > ul > li > ol > li > a,
+	.nav > ul > li > ul > li > a {
+		width: 100%;
+		text-wrap: no-wrap;
+	}
+
+ *----/
