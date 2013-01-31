@@ -1,52 +1,121 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Example inkling Page</title>
 		<!--[if IE]><![endif]-->
-		<link rel="stylesheet" href="inkling.css" type='text/css' media='all' />
+		<link rel="stylesheet" href="https://raw.github.com/dotink/inKLing/master/inkling.css" type='text/css' media='all' />
 		<style>
 			body {
 				width: 960px;
 				margin: auto;
 			}
 
-			#column_example  {
-				background-color: #e2e2e2;
-			}
-
-			#column_example .aside {
+			#container_example > .principal {
 				background-color: #efefef;
 			}
 
-			.nav li {
-				width: 23%;
+			#container_example > aside {
+				background-color: #ccc;
+			}
+
+			nav .primary > li {
+				width: 25%;
 				text-align: center;
 				background-color: #efefef;
-				padding: 1%;
 			}
 
-			.nav li:hover {
+			nav li:hover {
 				background-color: #e0e0e0;
 			}
-
-			.section {
-				padding: 10px;
-			}
-
 		</style>
 	</head>
 	<body>
-		<h1>Header 1</h1>
-		<h2>Header 2</h2>
-		<h3>Header 3</h3>
-		<h4>Header 4</h4>
-		<h5>Header 5</h5>
-		<h6>Header 6</h6>
+		<h1>Welcome to inKLing</h1>
 		<p>
-			As you can see above, default header sizes are similarly proportional to most browser defaults.
+			This page is an example of what inKling can do with essentially no custom CSS.  The entirity of custom CSS on this page is roughly 10 - 20 lines and consists mostly of what is needed to define some colors for simple visualization and our very basic nav style (in our case 4 nav items of equal size taking up full width with centered text - 3 lines).
 		</p>
-		<h1>Example Paragraph</h1>
+		<p>
+			This page uses some nwer HTML5 tags, however, inKLing provides full support for using HTML tag names as classes on divs for all its major functionality.
+		</p>
+
+
+		<h2>Headings Are Normalized</h2>
+		<p>
+			You can see from the grouped headings and paragraphs below that all headings consume the same height, however, provide varying degreess of top and bottom margin.
+		</p>
+		<div class="brochure group">
+			<div>
+				<h1>Testing H1</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+				</p>
+			</div>
+			<div>
+				<h2>Testing H2</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+				</p>
+			</div>
+			<div>
+				<h3>Testing H3</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+				</p>
+			</div>
+		</div>
+
+		<div class="catalogue group">
+			<div>
+				<h1>Testing H1</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+				</p>
+			</div>
+			<div>
+				<h4>Testing H4</h4>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+				</p>
+			</div>
+			<div>
+				<h5>Testing H5</h5>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+				</p>
+			</div>
+			<div>
+				<h6>Testing H6</h6>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+				</p>
+			</div>
+		</div>
+
+
+
+		<h2>Example Paragraph</h2>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -56,6 +125,7 @@
 			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 			culpa qui officia deserunt mollit anim id est laborum.
 		</p>
+
 		<h2>Example UL (Grocery List)</h2>
 		<ul>
 			<li>Steak</li>
@@ -64,17 +134,18 @@
 			<li>Eggs</li>
 			<li>One Strawberry</li>
 		</ul>
-		<h3>Example OL (Priorities)</h3>
+
+		<h2>Example OL (Priorities)</h2>
 		<ol>
 			<li>Shop for Groceries</li>
 			<li>Eat Strawberry</li>
 			<li>Cook Steak, Eggs, and Potatoes in Butter for Tomorrow</li>
 		</ol>
 
-		<div class="hgroup">
-			<h1>Grouped Headings (.hgroup) Get Different margins</h1>
-			<h2>Compare this to the headings at the top</h2>
-		</div>
+		<hgroup>
+			<h2>HGroups Get Different Margins</h2>
+			<h3>Compare this to the headings at the top</h3>
+		</hgroup>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -85,41 +156,41 @@
 			culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 
-		<h3>Grouped Lists Get No Bullets</h3>
-		<div class="brochure group">
-			<div>
-				<div clas="seciton">
-					<h4>Item 1</h4>
+		<h2>Grouped Lists Get No Bullets</h2>
+		<ul class="brochure group">
+			<li>
+				<section>
+					<h3>Item 1</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore magna
 						aliqua.
 					</p>
-				</div>
-			</div>
-			<div>
-				<div clas="seciton">
-					<h4>Item 2</h4>
+				</section>
+			</li>
+			<li>
+				<section>
+					<h3>Item 4</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore magna
 						aliqua.
 					</p>
-				</div>
-			</div>
-			<div>
-				<div clas="seciton">
-					<h4>Item 3</h4>
+				</section>
+			</li>
+			<li>
+				<section>
+					<h3>Item 3</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore magna
 						aliqua.
 					</p>
-				</div>
-			</div>
-		</div>
+				</section>
+			</li>
+		</ul>
 
-		<h3>Nested Lists Are Good</h3>
+		<h2>Nested Lists Are Good</h2>
 		<ul>
 			<li>
 				Preparation of Food
@@ -127,31 +198,20 @@
 					<li>
 						Cook Steak
 						<ul>
-							<li>
-								Nested styles differ
-								<ol>
-									<li>
-										For numeric lists too
-									</li>
-								<ol>
-							</li>
+							<li>Nested styles differ</li>
 						</ul>
 					</li>
-					<li>
-						Cook Eggs
-					</li>
-					<li>
-						Add Butter
-					</li>
+					<li>Cook Eggs</li>
+					<li>Add Butter</li>
 				</ol>
 			</li>
 		</ul>
 
-		<h3>Creating Columns Is Easy</h3>
-		<div id="column_example" class="container group">
-			<div>
-				<div class="section">
-					<h4>Section</h4>
+		<h2>Creating Columns Is Easy</h2>
+		<div id="container_example" class="container group">
+			<div class="principal">
+				<section>
+					<h3>Section</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -167,23 +227,23 @@
 						sed do eiusmod tempor incididunt ut labore et dolore magna
 						aliqua.
 					</p>
-				</div>
+				</section>
 			</div>
-			<div class="aside">
-				<div class="section">
-					<h4>Aside</h4>
+			<aside>
+				<section>
+					<h3>Aside</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore magna
 						aliqua.
 					</p>
-				</div>
+				</section>
 			</div>
 		</div>
 
-		<h3>Navigation Is A Snap</h3>
-		<div class="nav">
-			<ul class="group">
+		<h2>Navigation Is A Snap</h2>
+		<nav>
+			<ul class="primary group">
 				<li>
 					<a href="#">Home</a>
 				</li>
@@ -197,13 +257,13 @@
 					<a href="#">FAQ</a>
 				</li>
 			</ul>
-		</div>
+		</nav>
 
 		<form id="comment" action="" method="get">
 			<h3>Form Styling Sucks... Normally</h3>
 			<div class="featurette group">
 				<fieldset>
-					<div class="section">
+					<section>
 						<legend>Your Information</legend>
 						<label>Your Name</label>
 						<input type="text" />
@@ -211,14 +271,12 @@
 						<input type="text" />
 						<label>Your Website</label>
 						<input type="text" />
-					</div>
+					</section>
 				</fieldset>
 				<fieldset>
-					<div class="section">
-						<legend>Your Comment</legend>
-						<label>Body</label>
-						<textarea rows="10" cols="60"></textarea>
-					</div>
+					<legend>Your Comment</legend>
+					<label>Body</label>
+					<textarea rows="10" cols="60"></textarea>
 				</fieldset>
 			</div>
 			<fieldset class="options">
@@ -231,3 +289,4 @@
 
 	</body>
 </html>
+
