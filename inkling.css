@@ -190,7 +190,7 @@ table {
 
 .container {
 	overflow: hidden;
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;;
 }
 
 .group {
@@ -365,13 +365,13 @@ body {
 
 
 p {
-	line-height: 1.4em;
+	line-height: 1.5em;
 }
 
 p,
 figure {
 	font-size: 1em;
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;;
 }
 
 li {
@@ -381,7 +381,7 @@ li {
 ul,
 ol {
 	font-size: 1em;
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;;
 	list-style-position: outside;
 }
 
@@ -458,7 +458,7 @@ sub {
 }
 
 pre {
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;;
 }
 
 pre,
