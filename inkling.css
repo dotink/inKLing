@@ -317,7 +317,15 @@ ul.group > li > section p:last-child {
 
 	.group > aside,
 	.group > .aside {
-		width: 30%;
+		width: 25%;
+	}
+
+	.group > .aside + .principal {
+		margin-left: 5%;
+	}
+
+	.group > .princpal + .aside {
+		margin-right: 5%;
 	}
 
 .featurette.group { /** Split 50/50 **/ }
