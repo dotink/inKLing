@@ -1,0 +1,115 @@
+html {
+	background-color: #222;
+}
+
+body > header {
+	background-color: #ddd;
+}
+
+body > footer {
+
+}
+
+body > div[role=main] {
+	background-color: #fff;
+	padding: 3em 0;
+}
+
+/**
+ *
+ */
+body > div[role=main] > header,
+body > div[role=main] > .group {
+	width: 85%;
+	margin: 0 auto;
+}
+
+body > div[role=main] > .group {
+
+}
+
+h2, h3, h4, h5, h6 {
+	color: #555;
+	font-weight: lighter;
+}
+
+h2 {
+	color: #295c9b;
+	border-bottom: dotted 1px #888;
+}
+
+a.action {
+	display: inline-block;
+	margin: .5% 0 2%;
+	padding: .75em;
+
+	background-color: #ded8c3;
+
+	border: solid 1px #aaa;
+	border-bottom-color: #777;
+	border-radius: 5px;
+
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px #fff;
+
+	transition: background-color 500ms;
+}
+
+a.action:hover {
+	background-color: #e8e1cc;
+
+	transition: background-color 500ms;
+}
+
+a.action + a.action {
+	margin-left: 2%;
+}
+
+img.icon {
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 3%;
+}
+
+blockquote {
+	background-color: #eee;
+	margin-left: 1%;
+	padding: .5em 1em;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 2px 2px 5px #ccc;
+	border-right: solid 1px #bbb;
+	border-bottom: solid 1px #aaa;
+	border-left: solid 10px #9c6828;
+}
+
+blockquote > p:last-child {
+	margin-bottom: 0;
+}
+
+blockquote cite {
+	font-family: serif;
+	font-style: italic;
+	display: block;
+	margin-left: 2%;
+	opacity: .75;
+}
+
+p > code {
+	padding: 0 5px 1px;
+	border: dotted 1px #ddd;
+	background-color: #efefef;
+}
+
+table tr:first-child th,
+table thead tr:first-child th {
+	background-color: #444;
+	color: #eee;
+}
+
+.highlight {
+	color: #398502;
+	font-size: 2.2em;
+	font-weight: lighter;
+}

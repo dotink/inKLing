@@ -19,7 +19,8 @@
  | Web Font Import
  *-----------------------------------------------------------------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,600italic,300,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 
 /*------------------------------------------------------------------------------------------------
  | Reset
@@ -188,11 +189,6 @@ table {
  | Structures
  *-----------------------------------------------------------------------------------------------*/
 
-.container {
-	overflow: hidden;
-	margin-bottom: 2em;;
-}
-
 .group {
 	clear: both;
 }
@@ -221,14 +217,9 @@ table {
 	float: left;
 }
 
-ul.group,
-ol.group {
-	list-style-type: none;
-	margin-left: 0;
-}
-
-.group > li {
-	margin-left: 0;
+.container {
+	overflow: hidden;
+	margin: 2em 0;
 }
 
 .container.group > li,
@@ -239,93 +230,120 @@ ol.group {
 	margin-bottom: -5000px;
 }
 
+ul.group,
+ol.group {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.group > li {
+	margin-left: 0;
+}
 
 /*------------------------------------------------------------------------------------------------
  | Extended Structures
  *-----------------------------------------------------------------------------------------------*/
 
-.group > li > section,
-.group > li > .section,
-.group > div > section,
-.group > div > .section,
-.group > aside > section,
-.group > aside > .section,
-.group > fieldset > section,
+.group > li       >  section,
+.group > li       > .section,
+.group > div      >  section,
+.group > div      > .section,
+.group > fieldset >  section,
 .group > fieldset > .section {
-	padding: 0 1em;
+	padding: 0 2.5%;
 }
 
-ol.group > li > section p:last-child,
-ul.group > li > section p:last-child {
-	margin-bottom: 0;
+.group > aside    >  section,
+.group > aside    > .section {
+	padding: 2.5%;
 }
 
-.group > li.first > section,
-.group > li.first > .section,
-.group > li:first-child > section,
-.group > li:first-child > .section,
+.container.group > li       >  section,
+.container.group > li       > .section,
+.container.group > div      >  section,
+.container.group > div      > .section,
+.container.group > aside    >  section,
+.container.group > aside    > .section,
+.container.group > fieldset >  section,
+.container.group > fieldset > .section {
+	padding: 2.5%;
+}
 
-.group > div.first > section,
-.group > div.first > .section,
-.group > div:first-child > section,
-.group > div:first-child > .section,
-
-.group > fieldset.first > section,
-.group > fieldset.first > .section,
-.group > fieldset:first-child > section,
+.group > li:first-child       >  section,
+.group > li:first-child       > .section,
+.group > div:first-child      >  section,
+.group > div:first-child      > .section,
+.group > fieldset:first-child >  section,
 .group > fieldset:first-child > .section {
-
 	padding-left: 0;
 	border-left: 0;
 }
 
-.group > div.last > section,
-.group > div.last > .section,
-.group > div:last-child > section,
-.group > div:last-child > .section,
-
-.group > li.last > section,
-.group > li.last > .section,
-.group > li:last-child > section,
-.group > li:last-child > .section,
-
-.group > fieldset.last > section,
-.group > fieldset.last > .section,
-.group > fieldset:last-child > section,
+.group > div.last            >  section,
+.group > div.last            > .section,
+.group > div:last-child      >  section,
+.group > div:last-child      > .section,
+.group > li.last             >  section,
+.group > li.last             > .section,
+.group > li:last-child       >  section,
+.group > li:last-child       > .section,
+.group > fieldset.last       >  section,
+.group > fieldset.last       > .section,
+.group > fieldset:last-child >  section,
 .group > fieldset:last-child > .section {
-
 	padding-right: 0;
 	border-right: 0;
 }
 
-.container.group > li > section,
-.container.group > li > .section,
-.container.group > div > section,
-.container.group > div > .section,
-.container.group > aside > section,
-.container.group > aside > .section,
-.container.group > fieldset > section,
-.container.group > fieldset > .section {
-	padding: 1em;
-}
 
-.group { /** Split 70/30 **/ }
+.group { }
+
+	.group > .preface {
+		width: 27.5%;
+	}
 
 	.group > .principal {
 		width: 70%;
+		margin-left: 2.5%;
 	}
 
-	.group > aside,
-	.group > .aside {
-		width: 25%;
+	.group > .principal:first-child {
+		margin-left: 0;
 	}
 
-	.group > .aside + .principal {
-		margin-left: 5%;
+
+	p +  aside,
+	p + .aside {
+		margin-top: -1%;
+		width: 35%;
+		float: right;
+		margin: -1% 0 3% 1em;
+		padding: .5em 1em;
+		background-color: #ffffc3;
+		font-family: serif;
+		font-style: italic;
+		border-radius: .25em;
 	}
 
-	.group > .princpal + .aside {
-		margin-right: 5%;
+	.group >  aside,
+	.group > .aside,
+	.group > .prologue {
+		width: 27.5%;
+		float: right;
+	}
+
+	.group > .preface + .principal {
+		width: 45%;
+	}
+
+	.group > .preface + .principal +  aside,
+	.group > .preface + .principal + .aside,
+	.group > .preface + .principal + .prologue {
+		width: 22.5%;
+	}
+
+	.group > .preface + .principal:last-child {
+		width: 70%;
 	}
 
 .featurette.group { /** Split 50/50 **/ }
@@ -352,6 +370,152 @@ ul.group > li > section p:last-child {
 		width: 25%;
 	}
 
+@media only screen and (max-width: 1366px) {
+	.group > .principal .catalogue.group > div,
+	.group > .principal .catalogue.group > div {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.group > .principal .brochure.group > li {
+		width: 50%;
+	}
+
+	.group > .principal .brochure.group > li:first-child {
+		width: 100%;
+	}
+
+	.group > .principal .brochure.group > li:first-child >  section
+	.group > .principal .brochure.group > li:first-child > .section {
+		padding: 0;
+	}
+
+	.group > .principal .brochure.group > li:nth-child(even) >  section,
+	.group > .principal .brochure.group > li:nth-child(even) > .section {
+		padding-left: 0;
+	}
+
+	.group > .principal .brochure.group > li:nth-child(odd) >  section,
+	.group > .principal .brochure.group > li:nth-child(odd) > .section {
+		padding-right: 0;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.group > .principal {
+		width: 60%;
+	}
+
+	.group >  aside,
+	.group > .aside {
+		width: 37.5%;
+	}
+
+	.group > .principal .catalogue.group > div {
+		width: 100%;
+	}
+
+	.group > .principal .brochure.group > li {
+		width: 100%;
+	}
+
+	.group > .principal .brochure.group > li >  section,
+	.group > .principal .brochure.group > li > .section {
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+
+	.group > .preface {
+		width: 100%;
+	}
+
+	.group > .principal {
+		width: 100%;
+	}
+
+	.group > .preface + .principal {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.group > .preface + .principal:last-child {
+		width: 100%;
+	}
+
+
+	.group >  aside,
+	.group > .aside,
+	.group > .prologue {
+		width: 100%;
+	}
+
+	.group > .preface + .principal +  aside,
+	.group > .preface + .principal + .aside,
+	.group > .preface + .principal + .prologue {
+		width: 100%;
+	}
+
+
+	.group > .principal .catalogue.group > div {
+		width: 50%;
+	}
+
+	.group > .principal .brochure.group > li {
+		width: 50%;
+	}
+
+	.group > .principal .brochure.group > li:first-child {
+		width: 100%;
+	}
+
+	.group > .principal .brochure.group > li:first-child >  section
+	.group > .principal .brochure.group > li:first-child > .section {
+		padding: 0;
+	}
+
+	.group > .principal .brochure.group > li:nth-child(even) >  section,
+	.group > .principal .brochure.group > li:nth-child(even) > .section {
+		padding-left: 0;
+	}
+
+	.group > .principal .brochure.group > li:nth-child(odd) >  section,
+	.group > .principal .brochure.group > li:nth-child(odd) > .section {
+		padding-right: 0;
+	}
+}
+
+
+@media only screen and (max-width: 640px) {
+
+	p + aside,
+	p + .aside {
+		width: auto;
+		margin-left: 0;
+	}
+
+	.group > .principal .catalogue.group > div {
+		width: 100%;
+	}
+
+	.group > .principal .brochure.group > li {
+		width: 100%;
+	}
+
+	.group > .principal .brochure.group > li >  section,
+	.group > .principal .brochure.group > li > .section {
+		padding: 0;
+	}
+}
+
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
 
 /*------------------------------------------------------------------------------------------------
  |	Suggested Basic Styling and Fixes
@@ -368,7 +532,7 @@ html {
 body {
 	font-size: 1.0em;
 	margin: 0 auto;
-	font-family: Oxygen, sans-serif;
+	font-family: "Source Sans Pro";
 }
 
 
@@ -379,8 +543,14 @@ p {
 p,
 figure {
 	font-size: 1em;
-	margin-bottom: 2em;;
+	margin-bottom: 3%;
 }
+
+ul.group + p,
+ol.group + p {
+	margin-top: -1.5%;
+}
+
 
 li {
 	margin-bottom: .5em;
@@ -389,12 +559,12 @@ li {
 ul,
 ol {
 	font-size: 1em;
-	margin-bottom: 2em;;
+	margin-left: 1em;
+	margin-bottom: 3%;
 	list-style-position: outside;
 }
 
 ul {
-	margin-left: 1.25em;
 	list-style: disc;
 }
 
@@ -402,12 +572,27 @@ ul ul {
 	list-style-type: circle;
 }
 
+ul ul ul {
+	list-style-type: square;
+}
+
+ul ul ul ul {
+	list-style-type: disc;
+}
+
 ol {
-	margin-left: 1.5em;
-	list-style: outside decimal;
+	list-style-type: decimal;
 }
 
 ol ol {
+	list-style-type: upper-alpha;
+}
+
+ol ol ol {
+	list-style-type: lower-roman;
+}
+
+ol ol ol ol {
 	list-style-type: lower-alpha;
 }
 
@@ -420,8 +605,17 @@ ol ul {
 	font-size: 1em;
 }
 
+p + ul,
+p + ol {
+	margin-top: -1.5%;
+}
+
 li p {
 	font-size: 1em;
+}
+
+li :last-child {
+	margin-bottom: 0;
 }
 
 a {
@@ -465,8 +659,12 @@ sub {
 	-webkit-text-size-adjust: inherit;
 }
 
+blockquote {
+	margin-bottom: 3%;
+}
+
 pre {
-	margin-bottom: 2em;;
+	margin-bottom: 3%;
 }
 
 pre,
@@ -475,7 +673,7 @@ pre code {
 }
 
 pre, code, kbd, samp {
-	font-family: FakeMonoSpaceFont, monospace;
+	font-family: FakeMonoSpaceFont, "Source Code Pro", monospace;
 }
 
 
@@ -484,7 +682,7 @@ pre, code, kbd, samp {
  *-----------------------------------------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 100%;
+	line-height: 1.25em;
 	font-weight: bold;
 }
 
@@ -506,7 +704,7 @@ h2 {
 
 h3 {
 	font-size: 2.25em;
-	margin-top: .333em;
+	margin-top: .365em;
 	margin-bottom: .447em;
 }
 
@@ -535,7 +733,7 @@ h6 {
 
 table {
 	width: 100%;
-	margin-bottom: 1em;
+	margin-bottom: 3%;
 }
 
 th {
@@ -664,18 +862,6 @@ input[type="checkbox"] + label {
 
 
 /*------------------------------------------------------------------------------------------------
- | Extended Styles
- *-----------------------------------------------------------------------------------------------*/
-
-ul ul {
-	list-style-type: circle;
-}
-
-ol ol {
-	list-style-type: lower-alpha;
-}
-
-/*------------------------------------------------------------------------------------------------
  | Extended Headings
  *-----------------------------------------------------------------------------------------------*/
 
@@ -707,130 +893,23 @@ ol ol {
 	margin-top: 0;
 }
 
-h1 + .group > * > h2:first-child,
-h2 + .group > * > h3:first-child,
-h3 + .group > * > h4:first-child,
-h4 + .group > * > h5:first-child,
-h5 + .group > * > h6:first-child,
-h1 + .group > * > section > h2:first-child,
-h2 + .group > * > section > h3:first-child,
-h3 + .group > * > section > h4:first-child,
-h4 + .group > * > section > h5:first-child,
-h5 + .group > * > section > h6:first-child,
-h1 + .group > * > .section > h2:first-child,
-h2 + .group > * > .section > h3:first-child,
-h3 + .group > * > .section > h4:first-child,
-h4 + .group > * > .section > h5:first-child,
-h5 + .group > * > .section > h6:first-child {
+.group > * >  h1:first-child,
+.group > * >  h2:first-child,
+.group > * >  h3:first-child,
+.group > * >  h4:first-child,
+.group > * >  h5:first-child,
+.group > * >  h6:first-child,
+.group > * >  section > h1:first-child,
+.group > * >  section > h2:first-child,
+.group > * >  section > h3:first-child,
+.group > * >  section > h4:first-child,
+.group > * >  section > h5:first-child,
+.group > * >  section > h6:first-child,
+.group > * > .section > h1:first-child,
+.group > * > .section > h2:first-child,
+.group > * > .section > h3:first-child,
+.group > * > .section > h4:first-child,
+.group > * > .section > h5:first-child,
+.group > * > .section > h6:first-child {
 	margin-top: 0;
 }
-
-
-/*------------------------------------------------------------------------------------------------
- | Navigation Styles (for use with bullet-proof nav)
- |
- |
- | <nav>
- |     <ul class="primary">
- |         <li>...</li>
- |         <li>
- |             <a href="#">...</a>
- |             <ul>
- |                 <li>...</li>
- |             </ul>
- |         </li>
- |     </ul>
- | </nav>
- |
- *-----------------------------------------------------------------------------------------------*/
-
- nav a,
-.nav a {
-	text-decoration: none;
-	display: block;
-	padding: .5em 1em;
-}
-
- nav ol,
- nav ul,
-.nav ol,
-.nav ul {
-	list-style-type: none;
-	margin: 0;
-}
-
- nav > ol > li,
- nav > ul > li,
-.nav > ol > li,
-.nav > ul > li {
-	overflow: hidden;
-}
-
- nav > ol > li > ol,
- nav > ol > li > ul,
- nav > ul > li > ol,
- nav > ul > li > ul,
-.nav > ol > li > ol,
-.nav > ol > li > ul,
-.nav > ul > li > ol,
-.nav > ul > li > ul {
-	position: absolute;
-	left: 0;
-}
-
-/*---- UNCOMMENT FOR HORIZONTAL SUBNAV
-
-	 nav > ol,
-	 nav > ul,
-	.nav > ol,
-	.nav > ul {
-		position: relative;
-	}
-
-	 nav > ol > li > ol,
-	 nav > ol > li > ul,
-	 nav > ul > li > ol,
-	 nav > ul > li > ul,
-	.nav > ol > li > ol,
-	.nav > ol > li > ul,
-	.nav > ul > li > ol,
-	.nav > ul > li > ul {
-		with: 100%;
-	}
-
- *----/
-
-/*---- UNCOMMENT FOR VERTICAL SUBNAV
-
-	 nav > ol > li,
-	 nav > ul > li,
-	.nav > ol > li,
-	.nav > ul > li {
-		position: relative;
-	}
-
-	 nav > ol > li > ol > li,
-	 nav > ol > li > ul > li,
-	 nav > ul > li > ol > li,
-	 nav > ul > li > ul > li,
-	.nav > ol > li > ol > li,
-	.nav > ol > li > ul > li,
-	.nav > ul > li > ol > li,
-	.nav > ul > li > ul > li {
-		with: 100%;
-	}
-
-
-	 nav > ol > li > ol > li > a,
-	 nav > ol > li > ul > li > a,
-	 nav > ul > li > ol > li > a,
-	 nav > ul > li > ul > li > a,
-	.nav > ol > li > ol > li > a,
-	.nav > ol > li > ul > li > a,
-	.nav > ul > li > ol > li > a,
-	.nav > ul > li > ul > li > a {
-		width: 100%;
-		text-wrap: no-wrap;
-	}
-
- *----/

@@ -6,288 +6,197 @@
 		<!--[if IE]><![endif]-->
 
 		<link rel="stylesheet" href="inkling.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="theme.css" type="text/css" media="all" />
 
-		<style>
-			body {
-				width: 960px;
-				margin: auto;
-			}
-
-			#container_example > .principal {
-				background-color: #efefef;
-			}
-
-			#container_example > aside {
-				background-color: #ccc;
-			}
-
-			nav .primary > li {
-				width: 25%;
-				text-align: center;
-				background-color: #efefef;
-			}
-
-			nav li:hover {
-				background-color: #e0e0e0;
-			}
-		</style>
 	</head>
 	<body>
-		<h1>Welcome to inKLing</h1>
-		<p>
-			This page is an example of what inKling can do with essentially no custom CSS.  The entirity of custom CSS on this page is roughly 10 - 20 lines and consists mostly of what is needed to define some colors for simple visualization and our very basic nav style (in our case 4 nav items of equal size taking up full width with centered text - 3 lines).
-		</p>
-		<p>
-			This page uses some nwer HTML5 tags, however, inKLing provides full support for using HTML tag names as classes on divs for all its major functionality.
-		</p>
+		<header>
 
 
-		<h2>Headings Are Normalized</h2>
-		<p>
-			You can see from the grouped headings and paragraphs below that all headings consume the same height, however, provide varying degreess of top and bottom margin.
-		</p>
-		<div class="brochure group">
-			<div>
-				<h1>Testing H1</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.
-				</p>
-			</div>
-			<div>
-				<h2>Testing H2</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.
-				</p>
-			</div>
-			<div>
-				<h3>Testing H3</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.
-				</p>
-			</div>
+		</header>
+		<div role="main">
+
+			<div class="group">
+				<div class="preface">
+					<h1>Welcome to inKLing</h1>
+
+					<p class="highlight"> Starting a new site?  Try something different!</p>
+
+					<p>Unlike other modern day "bootstrap" solutions, inKLing provides a toolkit that works with you rather than you working with it.</p>
+
+					<a class="action">Download Now</a>
+				</div>
+				<div class="principal">
+
+					<h2>Introduction</h2>
+
+					<p>The inKLing stylesheet is broken into two parts.  The first part is a combination reset, sane defaults, and opinionated base styling.  This is the base which all inKLing sites derive from and handles default structural integrity.  The second part is a theme.</p>
+
+					<aside>
+						<p>Theme's use inKLing's suggested classe names to define overall look and feel.</p>
+					</aside>
+
+
+					<p>Themes define coloring, padding/margin overrides for the structural elements, and general background colors.  Themes should not be so specific as to suggest an entire site design, but should be specific enough that they could be used to create a nice looking site rather quickly.</p>
+
+					<h2>Demonstration</h2>
+
+					<p>Below you will find various examples of what inKLing does right out of the box.  Some of the structural examples will use inline styles to clearly show what is unique on this page vs. what is included in inKLing.  You'll see how much you can get done with how little.</p>
+
+					<h3>Page Structure</h3>
+
+					<table>
+						<tr>
+							<th>Class / Element</th>
+							<th>Semantics</th>
+							<th>Commonly Used On</th>
+						</tr>
+						<tr>
+							<td><code>.group</code></td>
+							<td>Wraps elements of equal relevance (but not importance)</td>
+							<td><code>div</code>, <code>ul</code>, <code>ol</code></td>
+						</tr>
+						<tr>
+							<td><code>.preface</code></td>
+							<td>Wraps lead-in content</td>
+							<td><code>div</code>, <code>section</code></td>
+						</tr>
+						<tr>
+							<td><code>.principal</code></td>
+							<td>Wraps principle content</td>
+							<td><code>div</code>, <code>section</code></td>
+						</tr>
+						<tr>
+							<td><code>.prologue</code></td>
+							<td>Wraps afterword content</td>
+							<td><code>div</code>, <code>section</code></td>
+						</tr>
+						<tr>
+							<td><code>aside</code>, <code>.aside</code></td>
+							<td>Wraps tangentially related content</td>
+							<td><code>div</code>, <code>section</code></td>
+						</tr>
+						<tr>
+							<td><code>section</code>, <code>.section</code></td>
+							<td>Wraps contiguous headings, paragraphs, or sub-sections</td>
+							<td><code>div</code>, <code>section</code></td>
+						</tr>
+					</table>
+
+					<p>Structural classes do not provide any padding, however may use margin to be spaced against other structural elements when inside a group.  Structural elements (and their class fallbacks) provide padding </p>
+
+					<h4>Grouped Principal + Aside</h4>
+
+					<div class="group">
+						<div class="principal" style="min-height: 200px; background-color: #eee;">
+
+						</div>
+						<aside style="min-height: 100px; background-color: #ccc;">
+
+						</aside>
+					</div>
+
+					<h4>Grouped Preface + Principal</h4>
+
+					<div class="group">
+						<div class="preface" style="min-height: 150px; background-color: #888;">
+
+						</div>
+						<div class="principal" style="min-height: 200px; background-color: #eee;">
+
+						</div>
+					</div>
+
+					<h4>Grouped Preface + Principal + Aside</h4>
+
+					<div class="group">
+						<div class="preface" style="min-height: 150px; background-color: #888;">
+
+						</div>
+						<div class="principal" style="min-height: 200px; background-color: #eee;">
+
+						</div>
+						<aside style="min-height: 100px; background-color: #ccc;">
+
+						</aside>
+					</div>
+
+					<h3>Lists</h3>
+
+					<p>Lists in inKLing are expertly designed to function appropriately in standard and not-so standard circumstances.  For example:</p>
+
+					<ul>
+						<li>Nested list items are ensured to have a 1em font-size to avoid scaling down with nesting.</li>
+						<li>
+							List items containg other block level elements will adjust their margins accordingly.
+							<ul>
+								<li>
+									<p>Multiple paragraphs can easily be contained in a single list item.  This allows you to use ordered lists for purposes like legal contracts or licensing terms with different sections that are ordered.</p>
+
+									<p>Since the margin is only stripped on the last child, your paragraphs will look consistent with the rest of your document.  At the same time, your list items will not appear segregated from one another.</p>
+								</li>
+							</ul>
+						</li>
+						<li>Lists themselves have a margin that is consistent with paragraphs.</li>
+					</ul>
+
+					<h4>Grouping List Items</h4>
+
+					<p>In addition to standard lists like that above, you can also group list items by adding the <code>group</code> class directly on a <code>ul</code> or an <code>ol</code> element.</p>
+
+					<ul class="brochure group">
+						<li>
+							<section>
+								<h5>Grouped Lists Don't Have Bullets</h5>
+
+								<p>As you can see, grouped lists are nice and clean and have their bullets stripped the moment they're grouped</p>
+							</section>
+						</li>
+						<li>
+							<section>
+								<h5>Headings Have Different Margins</h5>
+
+								<p>Any headings which are in grouped list items will have their top margin removed.  This keeps the grouping nice and tight with any preceding heading.
+							</section>
+						</li>
+						<li>
+							<section>
+								<h5>Nested Lists Do the Following</h5>
+								<ul>
+									<li>Keep suitable list style positioning</li>
+									<li>
+										Maintain consistent margins
+										<ul>
+											<li>Which helps sub-sub-lists</li>
+										</ul>
+									</li>
+								</ul>
+							</section>
+						</li>
+					</ul>
+
+					<p>Because groups automatically clear, you don't need to worry about your grouped list items containing content of different lengths.  Things just keep on flowing!</p>
+
+					<h3>Block Quotes</h3>
+
+					<p>Block quotes on the net tend to follow the rather ubiqitous format of having a thick left border.  This has become almost synonymous with blockquotes across the web.  That said, inKLing does not include any custom styling of block quotes outside of themes.  The default theme, however, looks something like this:</p>
+
+					<blockquote>
+						<p>
+							The production of too many useful things results in too many useless people.
+						</p>
+						<cite>- Karl Marx</cite>
+					</blockquote>
+
+					<h3>Before We Forget</h3>
+
+					<p class="highlight">Did we mention it's responsive<sup>n</sup></p>
+
+				</div>
 		</div>
+		<footer>
 
-		<div class="catalogue group">
-			<div>
-				<h1>Testing H1</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.
-				</p>
-			</div>
-			<div>
-				<h4>Testing H4</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.
-				</p>
-			</div>
-			<div>
-				<h5>Testing H5</h5>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.
-				</p>
-			</div>
-			<div>
-				<h6>Testing H6</h6>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.
-				</p>
-			</div>
-		</div>
-
-
-
-		<h2>Example Paragraph</h2>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat. Duis aute irure dolor in
-			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-			culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-
-		<h2>Example UL (Grocery List)</h2>
-		<ul>
-			<li>Steak</li>
-			<li>Potatoes</li>
-			<li>Butter</li>
-			<li>Eggs</li>
-			<li>One Strawberry</li>
-		</ul>
-
-		<h2>Example OL (Priorities)</h2>
-		<ol>
-			<li>Shop for Groceries</li>
-			<li>Eat Strawberry</li>
-			<li>Cook Steak, Eggs, and Potatoes in Butter for Tomorrow</li>
-		</ol>
-
-		<hgroup>
-			<h2>HGroups Get Different Margins</h2>
-			<h3>Compare this to the headings at the top</h3>
-		</hgroup>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat. Duis aute irure dolor in
-			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-			culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-
-		<h2>Grouped Lists Get No Bullets</h2>
-		<ul class="brochure group">
-			<li>
-				<section>
-					<h3>Item 1</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</section>
-			</li>
-			<li>
-				<section>
-					<h3>Item 4</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</section>
-			</li>
-			<li>
-				<section>
-					<h3>Item 3</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</section>
-			</li>
-		</ul>
-
-		<h2>Nested Lists Are Good</h2>
-		<ul>
-			<li>
-				Preparation of Food
-				<ol>
-					<li>
-						Cook Steak
-						<ul>
-							<li>Nested styles differ</li>
-						</ul>
-					</li>
-					<li>Cook Eggs</li>
-					<li>Add Butter</li>
-				</ol>
-			</li>
-		</ul>
-
-		<h2>Creating Columns Is Easy</h2>
-		<div id="container_example" class="container group">
-			<div class="principal">
-				<section>
-					<h3>Section</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</section>
-			</div>
-			<aside>
-				<section>
-					<h3>Aside</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</section>
-			</div>
-		</div>
-
-		<h2>Navigation Is A Snap</h2>
-		<nav>
-			<ul class="primary group">
-				<li>
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<a href="#">About Us</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
-				<li>
-					<a href="#">FAQ</a>
-				</li>
-			</ul>
-		</nav>
-
-		<form id="comment" action="" method="get">
-			<h3>Form Styling Sucks... Normally</h3>
-			<div class="featurette group">
-				<fieldset>
-					<section>
-						<legend>Your Information</legend>
-						<label>Your Name</label>
-						<input type="text" />
-						<label>Your E-mail</label>
-						<input type="text" />
-						<label>Your Website</label>
-						<input type="text" />
-					</section>
-				</fieldset>
-				<fieldset>
-					<legend>Your Comment</legend>
-					<label>Body</label>
-					<textarea rows="10" cols="60"></textarea>
-				</fieldset>
-			</div>
-			<fieldset class="options">
-				<input type="checkbox" /><label>Notify Me of Updates</label>
-			</fieldset>
-			<fieldset class="actions">
-				<button type="submit">Submit</button>
-			</fieldset>
-		</form>
+		</footer>
 
 	</body>
 </html>
