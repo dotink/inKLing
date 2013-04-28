@@ -73,6 +73,10 @@ img.icon {
 	margin-bottom: 3%;
 }
 
+strong {
+	text-transform: uppercase;
+}
+
 blockquote {
 	background-color: #eee;
 	margin-left: 1%;
