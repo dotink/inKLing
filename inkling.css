@@ -893,23 +893,23 @@ input[type="checkbox"] + label {
 	margin-top: 0;
 }
 
-.group > * >  h1:first-child,
-.group > * >  h2:first-child,
-.group > * >  h3:first-child,
-.group > * >  h4:first-child,
-.group > * >  h5:first-child,
-.group > * >  h6:first-child,
-.group > * >  section > h1:first-child,
-.group > * >  section > h2:first-child,
-.group > * >  section > h3:first-child,
-.group > * >  section > h4:first-child,
-.group > * >  section > h5:first-child,
-.group > * >  section > h6:first-child,
-.group > * > .section > h1:first-child,
-.group > * > .section > h2:first-child,
-.group > * > .section > h3:first-child,
-.group > * > .section > h4:first-child,
-.group > * > .section > h5:first-child,
-.group > * > .section > h6:first-child {
+.group > li >  h1:first-child,
+.group > li >  h2:first-child,
+.group > li >  h3:first-child,
+.group > li >  h4:first-child,
+.group > li >  h5:first-child,
+.group > li >  h6:first-child,
+.group > li >  section > h1:first-child,
+.group > li >  section > h2:first-child,
+.group > li >  section > h3:first-child,
+.group > li >  section > h4:first-child,
+.group > li >  section > h5:first-child,
+.group > li >  section > h6:first-child,
+.group > li > .section > h1:first-child,
+.group > li > .section > h2:first-child,
+.group > li > .section > h3:first-child,
+.group > li > .section > h4:first-child,
+.group > li > .section > h5:first-child,
+.group > li > .section > h6:first-child {
 	margin-top: 0;
 }
