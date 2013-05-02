@@ -295,7 +295,7 @@ ol.group {
 
 		.group > * >  section,
 		.group > * > .section {
-			padding: 0 2.5%;
+			padding: 0 5%;
 		}
 
 		.group > aside     >  section,
@@ -304,7 +304,7 @@ ol.group {
 		.group > .preface  > .section,
 		.group > .prologue >  section,
 		.group > .prologue > .section, {
-			padding: 2.5%;
+			padding: 5%;
 		}
 
 		.group > :first-child >  section,
@@ -321,10 +321,14 @@ ol.group {
 			border-right: 0;
 		}
 
-		.container.group > * >  section,
-		.container.group > * > .section {
-			padding: 2.5%;
+		.container {
+			padding: 1.5% 3%;
 		}
+
+		.container.group {
+			padding: 0;
+		}
+
 
 .featurette.group { /** Split 50/50 **/ }
 
@@ -339,7 +343,7 @@ ol.group {
 	.brochure.group > li,
 	.brochure.group > div,
 	.brochure.group > fieldset {
-		width: 33%;
+		width: 33.333%;
 	}
 
 .catalogue.group { /** Split 25/25/25/25 **/ }
@@ -351,10 +355,16 @@ ol.group {
 	}
 
 @media only screen and (max-width: 1366px) {
+	.catalogue.group > li,
 	.catalogue.group > div,
-	.catalogue.group > div {
+	.catalogue.group > fieldset {
 		width: 50%;
 	}
+
+	.catalogue.group > :nth-child(3n) {
+		clear: left;
+	}
+
 
 	.catalogue.group > :nth-child(even) >  section,
 	.catalogue.group > :nth-child(even) > .section {
@@ -413,10 +423,10 @@ ol.group {
 		width: 100%;
 	}
 
-	.feature.group  > * > .section,
-	.feature.group  > * >  section,
-	.brochure.group > * > .section,
-	.brochure.group > * >  section {
+	.featurette.group  > * > .section,
+	.featurette.group  > * >  section,
+	.brochure.group    > * > .section,
+	.brochure.group    > * >  section {
 		padding: 0;
 	}
 }
@@ -484,6 +494,10 @@ ol.group {
 		width: 50%;
 	}
 
+	.catalogue.group > :nth-child(3n) {
+		clear: left;
+	}
+
 	.catalogue.group > :nth-child(even) >  section,
 	.catalogue.group > :nth-child(even) > .section {
 		padding-left: 0;
@@ -517,10 +531,10 @@ ol.group {
 		width: 100%;
 	}
 
-	.feature.group  > * > .section,
-	.feature.group  > * >  section,
-	.brochure.group > * > .section,
-	.brochure.group > * >  section {
+	.featurette.group  > * > .section,
+	.featurette.group  > * >  section,
+	.brochure.group    > * > .section,
+	.brochure.group    > * >  section {
 		padding: 0;
 	}
 
@@ -536,6 +550,102 @@ ol.group {
 	.group > * >  section,
 	.group > * > .section {
 		padding: 0;
+	}
+}
+
+
+.container.featurette.group > * >  section,
+.container.featurette.group > * > .section {
+	padding: 2.5% 6%;
+}
+
+@media only screen and (max-width: 1024px) {
+	.container.featurette.group > * >  section,
+	.container.featurette.group > * > .section {
+		padding: 2.5% 3%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.container.featurette.group > * >  section,
+	.container.featurette.group > * > .section {
+		padding: 2.5% 6%;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.container.featurette.group > * >  section,
+	.container.featurette.group > * > .section {
+		padding: 2.5% 3%;
+	}
+}
+
+.container.brochure.group > * >  section,
+.container.brochure.group > * > .section {
+	padding: 2.5% 9%;
+}
+
+@media only screen and (max-width: 1280px) {
+	.container.brochure.group > * > section,
+	.container.brochure.group > * > .section {
+		padding: 2.5% 6%;
+	}
+
+	.container.brochure.group > :first-child >  section,
+	.container.brochure.group > :first-child > .section {
+		padding: 2.5% 3%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.container.brochure.group > * >  section,
+	.container.brochure.group > * > .section {
+		padding: 2.5% 3%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.container.brochure.group > * > section,
+	.container.brochure.group > * > .section {
+		padding: 2.5% 6%;
+	}
+
+	.container.brochure.group > :first-child >  section,
+	.container.brochure.group > :first-child > .section {
+		padding: 2.5% 3%;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.container.brochure.group > * >  section,
+	.container.brochure.group > * > .section {
+		padding: 2.5% 3%;
+	}
+}
+
+.container.catalogue.group > * >  section,
+.container.catalogue.group > * > .section {
+	padding: 2.5% 12%;
+}
+
+@media only screen and (max-width: 1366px) {
+	.container.catalogue.group > * > section,
+	.container.catalogue.group > * > .section {
+		padding: 2.5% 6%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.container.catalogue.group > * > section,
+	.container.catalogue.group > * > .section {
+		padding: 2.5% 6%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.container.catalogue.group > * > section,
+	.container.catalogue.group > * > .section {
+		padding: 2.5% 3%;
 	}
 }
 
@@ -944,5 +1054,19 @@ input[type="checkbox"] + label {
 .group > li > .section > h4:first-child,
 .group > li > .section > h5:first-child,
 .group > li > .section > h6:first-child {
+	margin-top: 0;
+}
+
+.container > h1 + .group > * > h2:first-child,
+.container > h2 + .group > * > h3:first-child,
+.container > h3 + .group > * > h4:first-child,
+.container > h4 + .group > * > h5:first-child,
+.container > h5 + .group > * > h6:first-child,
+.container > h1 + .group > * > section > h2:first-child,
+.container > h2 + .group > * > section > h3:first-child,
+.container > h3 + .group > * > section > h4:first-child,
+.container > h4 + .group > * > section > h5:first-child,
+.container > h5 + .group > * > section > h6:first-child,
+.container > h1 + .group > * > section > h1:first-child {
 	margin-top: 0;
 }

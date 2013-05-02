@@ -181,7 +181,7 @@
 
 					<p>There are three common grouping styles in inKLing.  These use pseudo-semantic names and are designed for larger structrual elements.  Their names are designed to be partially semantic in that most of the cases they would be used, it would carry some semantic meaning to what you're displaying.</p>
 
-					<h2>Featurette</h2>
+					<h4>Featurette</h4>
 
 					<p>A <code>.featurette.group</code> is two equal width children by default similar to what you might use to feature items in a top of page billboard</p>
 
@@ -193,7 +193,7 @@
 					</div>
 
 
-					<h2>Brochure</h2>
+					<h4>Brochure</h4>
 
 					<p>A <code>.brochure.group</code> is three equal width children by default similar to a tri-fold brochure.</p>
 
@@ -206,7 +206,7 @@
 						</div>
 					</div>
 
-					<h2>Catalogue</h2>
+					<h4>Catalogue</h4>
 
 					<p>A <code>.catalogue.group</code> is four equal width children by default similar to what you would use if you were presenting a large number of small equally important items</p>
 
@@ -218,6 +218,98 @@
 						<div style="min-height: 200px; background-color: #ccc;">
 						</div>
 						<div style="min-height: 200px; background-color: #bbb;">
+						</div>
+					</div>
+
+					<h3>Containers</h3>
+
+					<p>Containers (divisional elements with a class of <code>container</code>) are designed to be segregated from their surrounding content.  That is, they are considered to be elements which are "free standing" in some regards.</p>
+
+					<div class="container" style="background-color: #eee; border-radius: 1em;">
+						<h4>Container Title</h4>
+						<div class="featurette group">
+							<div>
+								<section>
+									<h5>Container Padding</h5>
+									<p>A container which is not a group will have padding applied to it so that the elements it contains are separated from it's edges.</p>
+								</section>
+							</div>
+							<div>
+								<section>
+									<h5>Not Too Special</h5>
+									<p>There is no special treatment of the elements contained within with the exception of first titles in a group adjacent to a title.  Everything else should operate as any other element would in a parent, unaware of the padding which restricts them.</p>
+								</section>
+							</div>
+						</div>
+					</div>
+
+
+					<h4>Container Groups</h4>
+
+					<p>It is also possible to add the container class to a group itself.  Unlike a mere <code>.container</code> that is not a group, a <code>.container.group</code> will have it's padding passed on to sections.</p>
+
+					<div class="container featurette group" style="border-radius: 1em;">
+						<div style="background-color: #eee;">
+							<section>
+								<h5>Padding</h5>
+								<p>You can see from this example that each section is padded individually.</p>
+							</section>
+						</div>
+						<div style="background-color: #ddd;">
+							<section>
+								<h5>Background Colors</h5>
+								<p>In addition to padding, each child element is padded heavily on the bottom with a negative matching margin, filling normally empty bottom space with the its background color, giving the impression of equal height columns.</p>
+							</section>
+						</div>
+					</div>
+
+					<h5>Additional Examples</h5>
+
+					<div class="container brochure group" style="border-radius: 1em;">
+						<div style="background-color: #eee;">
+							<section>
+								<h6>Padding</h6>
+								<p>Unlike non-contained groups which only have padding applied to some sections, container groups are assumed to have a background color, either on the container as a whole, or on the individual elements they contain.  For this reason, sections are given equal padding on both sides and some top/bottom padding as well.</p>
+							</section>
+						</div>
+						<div style="background-color: #ddd;">
+							<section>
+								<h6>Background Colors</h6>
+								<p>In addition to this, each child element is padded with a negative margin, filling normally empty bottom space with the its background color, giving the impression of equal height columns.</p>
+							</section>
+						</div>
+						<div style="background-color: #eee;">
+							<section>
+								<h6>Padding</h6>
+								<p>Unlike non-contained groups which only have padding applied to some sections, container groups are assumed to have a background color, either on the container as a whole, or on the individual elements they contain.  For this reason, sections are given equal padding on both sides and some top/bottom padding as well.</p>
+							</section>
+						</div>
+					</div>
+
+					<div class="container catalogue group" style="border-radius: 1em;">
+						<div style="background-color: #eee;">
+							<section>
+								<h6>Padding</h6>
+								<p>Unlike non-contained groups which only have padding applied to some sections, container groups are assumed to have a background color, either on the container as a whole, or on the individual elements they contain.  For this reason, sections are given equal padding on both sides and some top/bottom padding as well.</p>
+							</section>
+						</div>
+						<div style="background-color: #ddd;">
+							<section>
+								<h6>Background Colors</h6>
+								<p>In addition to this, each child element is padded with a negative margin, filling normally empty bottom space with the its background color, giving the impression of equal height columns.</p>
+							</section>
+						</div>
+						<div style="background-color: #eee;">
+							<section>
+								<h6>Padding</h6>
+								<p>Unlike non-contained groups which only have padding applied to some sections, container groups are assumed to have a background color, either on the container as a whole, or on the individual elements they contain.  For this reason, sections are given equal padding on both sides and some top/bottom padding as well.</p>
+							</section>
+						</div>
+						<div style="background-color: #ddd;">
+							<section>
+								<h6>Background Colors</h6>
+								<p>In addition to this, each child element is padded with a negative margin, filling normally empty bottom space with the its background color, giving the impression of equal height columns.</p>
+							</section>
 						</div>
 					</div>
 
