@@ -244,12 +244,8 @@ ol.group {
  | Extended Structures
  *-----------------------------------------------------------------------------------------------*/
 
-.group > li       >  section,
-.group > li       > .section,
-.group > div      >  section,
-.group > div      > .section,
-.group > fieldset >  section,
-.group > fieldset > .section {
+.group > * >  section,
+.group > * > .section {
 	padding: 0 2.5%;
 }
 
@@ -269,28 +265,16 @@ ol.group {
 	padding: 2.5%;
 }
 
-.group > li:first-child       >  section,
-.group > li:first-child       > .section,
-.group > div:first-child      >  section,
-.group > div:first-child      > .section,
-.group > fieldset:first-child >  section,
-.group > fieldset:first-child > .section {
+.group > :first-child >  section,
+.group > :first-child > .section {
 	padding-left: 0;
 	border-left: 0;
 }
 
-.group > div.last            >  section,
-.group > div.last            > .section,
-.group > div:last-child      >  section,
-.group > div:last-child      > .section,
-.group > li.last             >  section,
-.group > li.last             > .section,
-.group > li:last-child       >  section,
-.group > li:last-child       > .section,
-.group > fieldset.last       >  section,
-.group > fieldset.last       > .section,
-.group > fieldset:last-child >  section,
-.group > fieldset:last-child > .section {
+.group > .last       >  section,
+.group > .last       > .section,
+.group > :last-child >  section,
+.group > :last-child > .section {
 	padding-right: 0;
 	border-right: 0;
 }
@@ -371,34 +355,43 @@ ol.group {
 	}
 
 @media only screen and (max-width: 1366px) {
-	.group > .principal .catalogue.group > div,
-	.group > .principal .catalogue.group > div {
+	.catalogue.group > div,
+	.catalogue.group > div {
 		width: 50%;
+	}
+
+	.catalogue.group > :nth-child(even) >  section,
+	.catalogue.group > :nth-child(even) > .section {
+		padding-left: 0;
+	}
+
+
+	.catalogue.group > :nth-child(odd) >  section,
+	.catalogue.group > :nth-child(odd) > .section {
+		padding-left: 0;
 	}
 }
 
 @media only screen and (max-width: 1280px) {
-	.group > .principal .brochure.group > li {
+
+	.brochure.group > li,
+	.brochure.group > div,
+	.brochure.group > fieldset {
 		width: 50%;
 	}
 
-	.group > .principal .brochure.group > li:first-child {
+	.brochure.group > :first-child {
 		width: 100%;
 	}
 
-	.group > .principal .brochure.group > li:first-child >  section
-	.group > .principal .brochure.group > li:first-child > .section {
+	.brochure.group > :first-child >  section
+	.brochure.group > :first-child > .section {
 		padding: 0;
 	}
 
-	.group > .principal .brochure.group > li:nth-child(even) >  section,
-	.group > .principal .brochure.group > li:nth-child(even) > .section {
+	.brochure.group > :nth-child(even) >  section,
+	.brochure.group > :nth-child(even) > .section {
 		padding-left: 0;
-	}
-
-	.group > .principal .brochure.group > li:nth-child(odd) >  section,
-	.group > .principal .brochure.group > li:nth-child(odd) > .section {
-		padding-right: 0;
 	}
 }
 
@@ -412,16 +405,22 @@ ol.group {
 		width: 37.5%;
 	}
 
-	.group > .principal .catalogue.group > div {
+	.featurette.group > li,
+	.featurette.group > div,
+	.featurette.group > fieldset {
 		width: 100%;
 	}
 
-	.group > .principal .brochure.group > li {
+	.brochure.group > li,
+	.brochure.group > div,
+	.brochure.group > fieldset {
 		width: 100%;
 	}
 
-	.group > .principal .brochure.group > li >  section,
-	.group > .principal .brochure.group > li > .section {
+	.feature.group  > * > .section,
+	.feature.group  > * >  section,
+	.brochure.group > * > .section,
+	.brochure.group > * >  section {
 		padding: 0;
 	}
 }
@@ -445,7 +444,6 @@ ol.group {
 		width: 100%;
 	}
 
-
 	.group >  aside,
 	.group > .aside,
 	.group > .prologue {
@@ -458,32 +456,47 @@ ol.group {
 		width: 100%;
 	}
 
-
-	.group > .principal .catalogue.group > div {
+	.featurette.group > li,
+	.featurette.group > div,
+	.featurette.group > fieldset {
 		width: 50%;
 	}
 
-	.group > .principal .brochure.group > li {
+	.brochure.group > li,
+	.brochure.group > div,
+	.brochure.group > fieldset {
 		width: 50%;
 	}
 
-	.group > .principal .brochure.group > li:first-child {
+	.brochure.group > :first-child {
 		width: 100%;
 	}
 
-	.group > .principal .brochure.group > li:first-child >  section
-	.group > .principal .brochure.group > li:first-child > .section {
+	.brochure.group > :first-child >  section
+	.brochure.group > :first-child > .section {
 		padding: 0;
 	}
 
-	.group > .principal .brochure.group > li:nth-child(even) >  section,
-	.group > .principal .brochure.group > li:nth-child(even) > .section {
+	.brochure.group > :nth-child(even) >  section,
+	.brochure.group > :nth-child(even) > .section {
 		padding-left: 0;
 	}
 
-	.group > .principal .brochure.group > li:nth-child(odd) >  section,
-	.group > .principal .brochure.group > li:nth-child(odd) > .section {
-		padding-right: 0;
+	.catalogue.group > li,
+	.catalogue.group > div,
+	.catalogue.group > fieldset {
+		width: 50%;
+	}
+
+	.catalogue.group > :nth-child(even) >  section,
+	.catalogue.group > :nth-child(even) > .section {
+		padding-left: 0;
+	}
+
+
+	.catalogue.group > :nth-child(odd) >  section,
+	.catalogue.group > :nth-child(odd) > .section {
+		padding-left: 0;
 	}
 }
 
@@ -496,24 +509,38 @@ ol.group {
 		margin-left: 0;
 	}
 
-	.group > .principal .catalogue.group > div {
+	.featurette.group > li,
+	.featurette.group > div,
+	.featurette.group > fieldset {
 		width: 100%;
 	}
 
-	.group > .principal .brochure.group > li {
+	.brochure.group > li,
+	.brochure.group > div,
+	.brochure.group > fieldset {
 		width: 100%;
 	}
 
-	.group > .principal .brochure.group > li >  section,
-	.group > .principal .brochure.group > li > .section {
+	.feature.group  > * > .section,
+	.feature.group  > * >  section,
+	.brochure.group > * > .section,
+	.brochure.group > * >  section {
 		padding: 0;
 	}
+
 }
 
-
 @media only screen and (max-width: 480px) {
+	.catalogue.group > li,
+	.catalogue.group > div,
+	.catalogue.group > fieldset {
+		width: 100%;
+	}
 
-
+	.group > * >  section,
+	.group > * > .section {
+		padding: 0;
+	}
 }
 
 
@@ -696,31 +723,41 @@ h1 {
 	margin-bottom: .333em;
 }
 
-h2 {
+h2,
+ section > h1,
+.section > h1 {
 	font-size: 2.75em;
 	margin-top: .091em;
 	margin-bottom: .364em;
 }
 
-h3 {
+h3,
+ section >  section > h1,
+.section > .section > h1 {
 	font-size: 2.25em;
 	margin-top: .365em;
 	margin-bottom: .447em;
 }
 
-h4 {
+h4,
+ section >  section >  section > h1,
+.section > .section > .section > h1 {
 	font-size: 1.75em;
 	margin-top: .666em;
 	margin-bottom: .630em;
 }
 
-h5 {
+h5,
+ section >  section >  section >  section > h1,
+.section > .section > .section > .section > h1  {
 	font-size: 1.50em;
 	margin-top: 1em;
 	margin-bottom: .674em;
 }
 
-h6 {
+h6,
+ section >  section >  section >  section >  section > h1,
+.section > .section > .section > .section > .section > h1 {
 	font-size: 1.25em;
 	margin-top: 1.4em;
 	margin-bottom: .815em;
