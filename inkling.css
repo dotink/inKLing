@@ -212,7 +212,6 @@ table {
 
 .group > li,
 .group > div,
-.group > aside,
 .group > fieldset {
 	float: left;
 }
@@ -222,10 +221,12 @@ table {
 	margin: 2em 0;
 }
 
-.container.group > li,
-.container.group > div,
-.container.group > aside,
-.container.group > fieldset {
+.container.group >  li,
+.container.group >  div,
+.container.group >  aside,
+.container.group >  fieldset,
+.container.group > .preface,
+.container.group > .prologue {
 	padding-bottom: 5000px;
 	margin-bottom: -5000px;
 }
@@ -243,44 +244,6 @@ ol.group {
 /*------------------------------------------------------------------------------------------------
  | Extended Structures
  *-----------------------------------------------------------------------------------------------*/
-
-.group > * >  section,
-.group > * > .section {
-	padding: 0 2.5%;
-}
-
-.group > aside    >  section,
-.group > aside    > .section {
-	padding: 2.5%;
-}
-
-.container.group > li       >  section,
-.container.group > li       > .section,
-.container.group > div      >  section,
-.container.group > div      > .section,
-.container.group > aside    >  section,
-.container.group > aside    > .section,
-.container.group > fieldset >  section,
-.container.group > fieldset > .section {
-	padding: 2.5%;
-}
-
-.group > :first-child >  section,
-.group > :first-child > .section {
-	padding-left: 0;
-	border-left: 0;
-}
-
-.group > .last       >  section,
-.group > .last       > .section,
-.group > :last-child >  section,
-.group > :last-child > .section {
-	padding-right: 0;
-	border-right: 0;
-}
-
-
-.group { }
 
 	.group > .preface {
 		width: 27.5%;
@@ -329,6 +292,39 @@ ol.group {
 	.group > .preface + .principal:last-child {
 		width: 70%;
 	}
+
+		.group > * >  section,
+		.group > * > .section {
+			padding: 0 2.5%;
+		}
+
+		.group > aside     >  section,
+		.group > aside     > .section,
+		.group > .preface  >  section,
+		.group > .preface  > .section,
+		.group > .prologue >  section,
+		.group > .prologue > .section, {
+			padding: 2.5%;
+		}
+
+		.group > :first-child >  section,
+		.group > :first-child > .section {
+			padding-left: 0;
+			border-left: 0;
+		}
+
+		.group > .last       >  section,
+		.group > .last       > .section,
+		.group > :last-child >  section,
+		.group > :last-child > .section {
+			padding-right: 0;
+			border-right: 0;
+		}
+
+		.container.group > * >  section,
+		.container.group > * > .section {
+			padding: 2.5%;
+		}
 
 .featurette.group { /** Split 50/50 **/ }
 
