@@ -324,6 +324,52 @@
 						<cite>- Karl Marx</cite>
 					</blockquote>
 
+					<h3>Misc Other Examples</h3>
+
+<pre><code>//
+//
+//
+&#39;Basic Model&#39; =&gt; function($data, $shared) {
+	$user = new User();
+	$user-&gt;setName(&#39;Matthew J. Sahagian&#39;);
+
+	assert(&#39;User::$name&#39;)
+		-&gt; using($user)
+		-&gt; equals(&#39;Matthew J. Sahagian&#39;)
+	;
+},</code></pre>
+
+					<p class="notice">
+						This is a notice.  A notice is designed to give you additional information, but differs from a helper in that it is more informational than helpful, for example, "Images must be exactly 300x210 pixels."  It is acceptable to use a notice outside of a form, while a helper should only be used in a form to help the user complete their task.
+					</p>
+
+					<p class="helper">
+						This is a helper.  A helper supplies specific coaching text for a user, such as, "Click and drag the items to order them how you'd like."
+					</p>
+
+					<form class="alert">
+						<p>
+							This is an alert.  Alerts must provide actional items such as "continuing" or "canceling" an action and are designed to intervene when a user should be aware of something before continue an action or taking an alternative route.  The green button below has a class of <code>suggested</code>.
+						</p>
+						<button type="submit" value="continue" class="suggested">Continue</button>
+						<button type="submit" value="cancel">Cancel</button>
+					</form>
+
+					<p class="success">
+						This is a success message.  This indicates that the previous submitted action was successful.
+					</p>
+
+					<p class="warning">
+						This is a warning message.  This indicates that the previous submitted action was successful, but you should be aware of something.
+					</p>
+
+					<p class="error">
+						This is a error message.  This indicates that the previous submitted action failed.
+					</p>
+
+
+					<a class="action">Test</a>
+
 					<h3>Before We Forget</h3>
 
 					<p class="highlight">Did we mention it's responsive<sup>n</sup></p>
