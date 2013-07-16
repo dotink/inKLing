@@ -324,7 +324,7 @@
 						<cite>- Karl Marx</cite>
 					</blockquote>
 
-					<h3>Misc Other Examples</h3>
+					<h3>Code Blocks</h3>
 
 <pre><code>//
 //
@@ -339,6 +339,8 @@
 	;
 },</code></pre>
 
+					<h3>Messaging</h3>
+
 					<p class="notice">
 						This is a notice.  A notice is designed to give you additional information, but differs from a helper in that it is more informational than helpful, for example, "Images must be exactly 300x210 pixels."  It is acceptable to use a notice outside of a form, while a helper should only be used in a form to help the user complete their task.
 					</p>
@@ -351,8 +353,8 @@
 						<p>
 							This is an alert.  Alerts must provide actional items such as "continuing" or "canceling" an action and are designed to intervene when a user should be aware of something before continue an action or taking an alternative route.  The green button below has a class of <code>suggested</code>.
 						</p>
-						<button type="submit" value="continue" class="suggested">Continue</button>
-						<button type="submit" value="cancel">Cancel</button>
+						<button type="submit" value="continue" class="suggested">Allow</button>
+						<button value="cancel">Don't Allow</button>
 					</form>
 
 					<p class="success">
@@ -367,8 +369,51 @@
 						This is a error message.  This indicates that the previous submitted action failed.
 					</p>
 
+					<h3>Forms</h3>
 
-					<a class="action">Test</a>
+					<form>
+						<div class="featurette group">
+							<fieldset>
+								<legend>Contact Information</legend>
+								<section>
+									<label>Name</label>
+									<input type="text" />
+
+									<label>E-Mail</label>
+									<input type="text" />
+
+									<label>Website</label>
+									<input type="text" />
+
+									<select>
+										<option>Phone Bit</option>
+										<option>Send Me Fliers</option>
+										<option>Ping My SMTP Server</option>
+									</select>
+
+								</section>
+							</fieldset>
+							<div>
+								<label>Comment</label>
+								<textarea cols="80" rows="4"></textarea>
+
+								<label>Click here if you accept the terms of soivice <input type="checkbox" /></label>
+
+								<fieldset>
+									<legend>I would like to</legend>
+									<label name="test">Receive a Cat <input type="radio"></label>
+									<label name="test">Shoot Flames from My Toenails <input type="radio"></label>
+									<label name="test">Destroy All Napkin Holders <input type="radio"></label>
+								</fieldset>
+
+
+							</div>
+						</div>
+
+						<button type="submit">Submit Button</button>
+						<button type="reset">Clear</button>
+						<a class="action">Cancel</a>
+					</form>
 
 					<h3>Before We Forget</h3>
 

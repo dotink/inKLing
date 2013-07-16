@@ -27,8 +27,8 @@
  *-----------------------------------------------------------------------------------------------*/
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, kbd, q, s,
-samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+button, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, kbd,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd,
 ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
 tr, th, td, article, aside, figure, figcaption, footer, header, hgroup, menu,
 nav, section, time, mark, audio, video {
@@ -987,6 +987,13 @@ button {
 	cursor: pointer;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+	float: left;
+	margin-right: 1em;
+}
+
+
 input[type="radio"] {
 	vertical-align: text-bottom;
 }
@@ -998,9 +1005,8 @@ input[type="checkbox"] {
 
 input[type="radio"] + label,
 input[type="checkbox"] + label {
-	display: inline;
+	float: right;
 	line-height: 1.3em;
-	margin-left: 10px;
 }
 
 

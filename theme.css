@@ -42,33 +42,65 @@ a {
 	color: #3E7D93;
 }
 
+button,
 a.action {
 	display: inline-block;
 	margin: .5% 0 2%;
 	padding: .75em;
-
-	background-color: #444;
-	color: #eee; /* #1E3D43; */
+	min-width: 150px;
 
 	border-radius: 5px;
 
+	font-family: inherit;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
-	text-shadow: 1px 1px 2px #333;
+	text-align: center;
 
 	transition: background-color 500ms;
 }
+
+button {
+	float: right;
+	background-color: #ddd;
+	color: #444;
+	border: solid 1px #ccc;
+	text-shadow: 1px 1px 2px #fff;
+}
+
+a.action {
+	background-color: #444;
+	color: #eee; /* #1E3D43; */
+	border: solid 1px #000;
+	text-shadow: 1px 1px 2px #333;
+}
+
+button:hover {
+	background-color: #ccc;
+}
+
 
 a.action:hover {
 	background-color: #333;
-
-	transition: background-color 500ms;
 }
 
+button,
 a.action + a.action {
 	margin-left: 2%;
 }
+
+button.suggested {
+	background-color: #ade3a3;
+}
+
+button.suggested:hover {
+	background-color: #bdf3b3;
+}
+
+button[type=submit]:hover {
+	background-color: #f6f6f6;
+}
+
 
 img.icon {
 	float: left;
@@ -223,14 +255,21 @@ form:after {
 	min-height: 1px;
 }
 
-button {
-	float: right;
+input[type=text],
+input[type=password],
+textarea,
+select {
+	border: solid 1px #ccc;
 }
 
-button + button {
-	margin-right: .5em;
+legend {
+	display: none;
 }
 
-button.suggested {
-	background-color: #ADE3A3;
+label {
+	color: #666;
+}
+
+select {
+	background-color: #eee;
 }
