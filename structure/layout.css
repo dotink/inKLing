@@ -1,0 +1,164 @@
+/*------------------------------------------------------------------------------------------------
+ | Structures
+ *-----------------------------------------------------------------------------------------------*/
+
+.group {
+	clear: both;
+}
+
+.group:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+* html .group {
+	height: 1%;
+}
+
+*:first-child+html .group {
+	min-height: 1px;
+}
+
+.group > li,
+.group > div,
+.group > fieldset {
+	float: left;
+}
+
+.container {
+	overflow: hidden;
+	margin: 2em 0;
+}
+
+.container.group >  li,
+.container.group >  div,
+.container.group >  aside,
+.container.group >  fieldset,
+.container.group > .preface,
+.container.group > .prologue {
+	padding-bottom: 5000px;
+	margin-bottom: -5000px;
+}
+
+ul.group,
+ol.group {
+	list-style: none;
+	margin-left: 0;
+}
+
+.group > li {
+	margin-left: 0;
+}
+
+/*------------------------------------------------------------------------------------------------
+ | Extended Structures
+ *-----------------------------------------------------------------------------------------------*/
+
+	.group > .preface {
+		width: 27.5%;
+	}
+
+	.group > .principal {
+		width: 70%;
+		margin-left: 2.5%;
+	}
+
+	.group > .principal:first-child {
+		margin-left: 0;
+	}
+
+
+	p +  aside,
+	p + .aside {
+		margin-top: -1%;
+		width: 35%;
+		float: right;
+		margin: -1% 0 3% 1em;
+		padding: .5em 1em;
+	}
+
+	.group >  aside,
+	.group > .aside,
+	.group > .prologue {
+		width: 27.5%;
+		float: right;
+	}
+
+	.group > .preface + .principal {
+		width: 45%;
+	}
+
+	.group > .preface + .principal +  aside,
+	.group > .preface + .principal + .aside,
+	.group > .preface + .principal + .prologue {
+		width: 22.5%;
+	}
+
+	.group > .preface + .principal:last-child {
+		width: 70%;
+	}
+
+		.group > * >  section,
+		.group > * > .section {
+			padding: 0 5%;
+		}
+
+		.group > aside     >  section,
+		.group > aside     > .section,
+		.group > .preface  >  section,
+		.group > .preface  > .section,
+		.group > .prologue >  section,
+		.group > .prologue > .section, {
+			padding: 5%;
+		}
+
+		.group > :first-child >  section,
+		.group > :first-child > .section {
+			padding-left: 0;
+			border-left: 0;
+		}
+
+		.group > .last       >  section,
+		.group > .last       > .section,
+		.group > :last-child >  section,
+		.group > :last-child > .section {
+			padding-right: 0;
+			border-right: 0;
+		}
+
+		.container {
+			padding: 1.5% 3%;
+		}
+
+		.container.group {
+			padding: 0;
+		}
+
+
+.featurette.group { /** Split 50/50 **/ }
+
+	.featurette.group > li,
+	.featurette.group > div,
+	.featurette.group > fieldset {
+		width: 50%;
+	}
+
+.brochure.group { /** Split 33/33/33 **/ }
+
+	.brochure.group > li,
+	.brochure.group > div,
+	.brochure.group > fieldset {
+		width: 33.333%;
+	}
+
+.catalogue.group { /** Split 25/25/25/25 **/ }
+
+	.catalogue.group > li,
+	.catalogue.group > div,
+	.catalogue.group > fieldset {
+		width: 25%;
+	}

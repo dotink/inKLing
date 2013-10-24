@@ -1,0 +1,108 @@
+/*------------------------------------------------------------------------------------------------
+ | Forms
+ *-----------------------------------------------------------------------------------------------*/
+
+form {}
+
+fieldset {
+	border-width: 0px;
+	margin-bottom: 1em;
+}
+
+	fieldset legend {
+		font-size: 1.4em;
+	}
+
+label {
+	display: block;
+	position: relative;
+	margin: .75em 0 .25em;
+	font-size: 1.2em;
+	line-height: 1em;
+}
+
+/**
+ * Because our inputs mix a % width and pixel padding+border, the size of the parent container
+ * will determine how tight these look.  Our padding and border is 12px by default, the width is
+ * 96%.  This means that the ideal width is 12 / .04 (or 300px).  For containers larger or smaller
+ * you should need only to increase or decrease with width percentage to achieve pixel perfection,
+ * if that's your thing.
+ *
+ * .custom_fieldset input[type=text] {
+ *     width: 92%; - Would be good for 150px fielsets
+ *     width: 98%; - Would be good for 600px fieldsets
+ *     width: x;   - Anything other outside of 150px - 600px fieldsets should probably not be used
+ * }
+ *
+ * The simple formula: (1 - ([padding + border] / [pixel width])) * 100 = [percent width]
+ *
+ * NOTE: Browsers supporting css calc() will fit their container.
+ */
+input[type=text],
+input[type=password],
+input[type=file],
+textarea {
+	display: block;
+	position: relative;
+	margin-bottom: 1em;
+	width: 96%;
+	padding: 5px;
+	width: -moz-calc(100% - 16px);
+	padding: -moz-calc(7px);
+	width: calc(100% - 16px);
+	padding: calc(7px);
+	font-size: 1em;
+	font-family: sans-serif;
+	border-radius: .25em;
+	border: solid 1px #666;
+}
+
+select {
+	margin-bottom: .5em;
+	border-radius: .25em;
+	border: solid 1px #666;
+	padding: 3px 3px 2px;
+	font-size: .95em;
+}
+
+option {
+	padding: 3px 6px;
+	font-size: .95em;
+}
+
+button {
+	padding: 5px;
+	margin: 1em 0;
+	border-radius: .25em;
+	border: solid 1px #666;
+	background-color: #fff;
+	font-size: 1em;
+}
+
+input[type=button],
+input[type=submit],
+button {
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	float: left;
+	margin-right: 1em;
+}
+
+
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+	vertical-align: bottom;
+	*vertical-align: baseline;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+	float: right;
+	line-height: 1.3em;
+}

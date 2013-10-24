@@ -1,3 +1,11 @@
+/*------------------------------------------------------------------------------------------------
+ | Web Font Import
+ *-----------------------------------------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,600italic,300,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+
 html {
 	background-color: #222;
 }
