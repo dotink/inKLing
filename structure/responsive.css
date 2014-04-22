@@ -1,13 +1,13 @@
-@media only screen and (max-width: 1600px) {
-	.featurette.group > :nth-child(3n) {
+@media only screen and (min-width: 1367px) {
+	.featurette.group > :nth-child(2n+1) {
 		clear: left;
 	}
 
-	.brochure.group > :nth-child(4n) {
+	.brochure.group > :nth-child(3n+1) {
 		clear: left;
 	}
 
-	.catalogue.group > :nth-child(5n) {
+	.catalogue.group > :nth-child(4n+1) {
 		clear: left;
 	}
 
@@ -19,7 +19,7 @@
 		width: 50%;
 	}
 
-	.catalogue.group > :nth-child(3n) {
+	.catalogue.group > :nth-child(2n+1) {
 		clear: left;
 	}
 
@@ -155,7 +155,7 @@
 		width: 50%;
 	}
 
-	.catalogue.group > :nth-child(3n) {
+	.catalogue.group > :nth-child(2n+1) {
 		clear: left;
 	}
 
