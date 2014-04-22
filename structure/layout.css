@@ -24,8 +24,7 @@
 }
 
 .group > li,
-.group > div,
-.group > fieldset {
+.group > div {
 	float: left;
 }
 
@@ -37,7 +36,6 @@
 .container.group >  li,
 .container.group >  div,
 .container.group >  aside,
-.container.group >  fieldset,
 .container.group > .preface,
 .container.group > .prologue {
 	padding-bottom: 5000px;
@@ -103,7 +101,8 @@ ol.group {
 	}
 
 		.group > * >  section,
-		.group > * > .section {
+		.group > * > .section,
+		.group > * > fieldset {
 			padding: 0 5%;
 		}
 
@@ -114,18 +113,6 @@ ol.group {
 		.group > .prologue >  section,
 		.group > .prologue > .section, {
 			padding: 5%;
-		}
-
-		.group > :first-child >  section,
-		.group > :first-child > .section {
-			padding-left: 0;
-		}
-
-		.group > .last       >  section,
-		.group > .last       > .section,
-		.group > :last-child >  section,
-		.group > :last-child > .section {
-			padding-right: 0;
 		}
 
 		.container {
@@ -140,23 +127,60 @@ ol.group {
 .featurette.group { /** Split 50/50 **/ }
 
 	.featurette.group > li,
-	.featurette.group > div,
-	.featurette.group > fieldset {
+	.featurette.group > div {
 		width: 50%;
 	}
+
+	.featurette.group > :nth-child(2n+1) >  section,
+	.featurette.group > :nth-child(2n+1) > .section,
+	.featurette.group > :nth-child(2n+1) > fieldset {
+		clear: left;
+		padding-left: 0;
+	}
+
+	.featurette.group > :nth-child(2n+2) >  section,
+	.featurette.group > :nth-child(2n+2) > .section,
+	.featurette.group > :nth-child(2n+2) > fieldset {
+		padding-right: 0;
+	}
+
 
 .brochure.group { /** Split 33/33/33 **/ }
 
 	.brochure.group > li,
-	.brochure.group > div,
-	.brochure.group > fieldset {
+	.brochure.group > div {
 		width: 33.333%;
+	}
+
+	.brochure.group > :nth-child(3n+1) >  section,
+	.brochure.group > :nth-child(3n+1) > .section,
+	.brochure.group > :nth-child(3n+1) > fieldset {
+		clear: left;
+		padding-left: 0;
+	}
+
+	.brochure.group > :nth-child(3n+3) >  section,
+	.brochure.group > :nth-child(3n+3) > .section,
+	.brochure.group > :nth-child(3n+3) > fieldset {
+		padding-right: 0;
 	}
 
 .catalogue.group { /** Split 25/25/25/25 **/ }
 
 	.catalogue.group > li,
-	.catalogue.group > div,
-	.catalogue.group > fieldset {
+	.catalogue.group > div {
 		width: 25%;
+	}
+
+	.catalogue.group > :nth-child(4n+1) >  section,
+	.catalogue.group > :nth-child(4n+1) > .section,
+	.catalogue.group > :nth-child(4n+1) > fieldset {
+		clear: left;
+		padding-left: 0;
+	}
+
+	.catalogue.group > :nth-child(4n+4) >  section,
+	.catalogue.group > :nth-child(4n+4) > .section,
+	.catalogue.group > :nth-child(4n+4) > fieldset {
+		padding-right: 0;
 	}

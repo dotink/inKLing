@@ -372,9 +372,9 @@
 
 					<form>
 						<div class="featurette group">
-							<fieldset>
-								<legend>Contact Information</legend>
-								<section>
+							<div>
+								<fieldset>
+									<legend>Contact Information</legend>
 									<label>Name</label>
 									<input type="text" />
 
@@ -389,14 +389,15 @@
 										<option>Send Me Fliers</option>
 										<option>Ping My SMTP Server</option>
 									</select>
-
-								</section>
-							</fieldset>
+								</fieldset>
+							</div>
 							<div>
-								<label>Comment</label>
-								<textarea cols="80" rows="4"></textarea>
+								<fieldset>
+									<label>Comment</label>
+									<textarea cols="80" rows="4"></textarea>
 
-								<label>Click here if you accept the terms of soivice <input type="checkbox" /></label>
+									<label>Click here if you accept the terms of soivice <input type="checkbox" /></label>
+								</fieldset>
 
 								<fieldset>
 									<legend>I would like to</legend>
@@ -404,12 +405,10 @@
 									<label name="test">Shoot Flames from My Toenails <input type="radio"></label>
 									<label name="test">Destroy All Napkin Holders <input type="radio"></label>
 								</fieldset>
-
-
 							</div>
 						</div>
 
-						<button type="submit">Submit Button</button>
+						<button type="submit" class="suggested">Submit Button</button>
 						<button type="reset">Clear</button>
 						<a class="action">Cancel</a>
 					</form>

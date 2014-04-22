@@ -1,7 +1,6 @@
 @media only screen and (max-width: 1366px) {
 	.catalogue.group > li,
-	.catalogue.group > div,
-	.catalogue.group > fieldset {
+	.catalogue.group > div {
 		width: 50%;
 	}
 
@@ -9,24 +8,22 @@
 		clear: left;
 	}
 
-
 	.catalogue.group > :nth-child(even) >  section,
-	.catalogue.group > :nth-child(even) > .section {
+	.catalogue.group > :nth-child(even) > .section,
+	.catalogue.group > :nth-child(even) > fieldset {
 		padding-left: 0;
 	}
 
-
 	.catalogue.group > :nth-child(odd) >  section,
-	.catalogue.group > :nth-child(odd) > .section {
-		padding-left: 0;
+	.catalogue.group > :nth-child(odd) > .section,
+	.catalogue.group > :nth-child(odd) > fieldset {
+		padding-right: 0;
 	}
 }
 
 @media only screen and (max-width: 1280px) {
-
 	.brochure.group > li,
-	.brochure.group > div,
-	.brochure.group > fieldset {
+	.brochure.group > div {
 		width: 50%;
 	}
 
@@ -35,13 +32,21 @@
 	}
 
 	.brochure.group > :first-child >  section
-	.brochure.group > :first-child > .section {
+	.brochure.group > :first-child > .section,
+	.brochure.group > :first-child > fieldset {
 		padding: 0;
 	}
 
 	.brochure.group > :nth-child(even) >  section,
-	.brochure.group > :nth-child(even) > .section {
+	.brochure.group > :nth-child(even) > .section,
+	.brochure.group > :nth-child(even) > fieldset {
 		padding-left: 0;
+	}
+
+	.brochure.group > :nth-child(odd) >  section,
+	.brochure.group > :nth-child(odd) > .section,
+	.brochure.group > :nth-child(odd) > fieldset {
+		padding-right: 0;
 	}
 }
 
@@ -56,27 +61,26 @@
 	}
 
 	.featurette.group > li,
-	.featurette.group > div,
-	.featurette.group > fieldset {
+	.featurette.group > div {
 		width: 100%;
 	}
 
 	.brochure.group > li,
-	.brochure.group > div,
-	.brochure.group > fieldset {
+	.brochure.group > div {
 		width: 100%;
 	}
 
-	.featurette.group  > * > .section,
 	.featurette.group  > * >  section,
+	.featurette.group  > * > .section,
+	.featurette.group  > * > fieldset,
+	.brochure.group    > * >  section,
 	.brochure.group    > * > .section,
-	.brochure.group    > * >  section {
+	.brochure.group    > * > fieldset {
 		padding: 0;
 	}
 }
 
 @media only screen and (max-width: 800px) {
-
 	.group > .preface {
 		width: 100%;
 	}
@@ -107,14 +111,12 @@
 	}
 
 	.featurette.group > li,
-	.featurette.group > div,
-	.featurette.group > fieldset {
+	.featurette.group > div {
 		width: 50%;
 	}
 
 	.brochure.group > li,
-	.brochure.group > div,
-	.brochure.group > fieldset {
+	.brochure.group > div {
 		width: 50%;
 	}
 
@@ -123,18 +125,19 @@
 	}
 
 	.brochure.group > :first-child >  section
-	.brochure.group > :first-child > .section {
+	.brochure.group > :first-child > .section,
+	.brochure.group > :first-child > fieldset {
 		padding: 0;
 	}
 
 	.brochure.group > :nth-child(even) >  section,
-	.brochure.group > :nth-child(even) > .section {
+	.brochure.group > :nth-child(even) > .section,
+	.brochure.group > :nth-child(even) > fieldset {
 		padding-left: 0;
 	}
 
 	.catalogue.group > li,
-	.catalogue.group > div,
-	.catalogue.group > fieldset {
+	.catalogue.group > div {
 		width: 50%;
 	}
 
@@ -143,20 +146,21 @@
 	}
 
 	.catalogue.group > :nth-child(even) >  section,
-	.catalogue.group > :nth-child(even) > .section {
+	.catalogue.group > :nth-child(even) > .section,
+	.catalogue.group > :nth-child(even) > fieldset {
 		padding-left: 0;
 	}
 
 
 	.catalogue.group > :nth-child(odd) >  section,
-	.catalogue.group > :nth-child(odd) > .section {
-		padding-left: 0;
+	.catalogue.group > :nth-child(odd) > .section,
+	.catalogue.group > :nth-child(odd) > fieldset {
+		padding-right: 0;
 	}
 }
 
 
 @media only screen and (max-width: 640px) {
-
 	p + aside,
 	p + .aside {
 		width: auto;
@@ -164,14 +168,12 @@
 	}
 
 	.featurette.group > li,
-	.featurette.group > div,
-	.featurette.group > fieldset {
+	.featurette.group > div {
 		width: 100%;
 	}
 
 	.brochure.group > li,
-	.brochure.group > div,
-	.brochure.group > fieldset {
+	.brochure.group > div {
 		width: 100%;
 	}
 
@@ -181,13 +183,11 @@
 	.brochure.group    > * >  section {
 		padding: 0;
 	}
-
 }
 
 @media only screen and (max-width: 480px) {
 	.catalogue.group > li,
-	.catalogue.group > div,
-	.catalogue.group > fieldset {
+	.catalogue.group > div {
 		width: 100%;
 	}
 
@@ -199,96 +199,111 @@
 
 
 .container.featurette.group > * >  section,
-.container.featurette.group > * > .section {
+.container.featurette.group > * > .section,
+.container.featurette.group > * > fieldset {
 	padding: 2.5% 6%;
 }
 
 @media only screen and (max-width: 1024px) {
 	.container.featurette.group > * >  section,
-	.container.featurette.group > * > .section {
+	.container.featurette.group > * > .section,
+	.container.featurette.group > * > fieldset {
 		padding: 2.5% 3%;
 	}
 }
 
 @media only screen and (max-width: 800px) {
 	.container.featurette.group > * >  section,
-	.container.featurette.group > * > .section {
+	.container.featurette.group > * > .section,
+	.container.featurette.group > * > fieldset {
 		padding: 2.5% 6%;
 	}
 }
 
 @media only screen and (max-width: 640px) {
 	.container.featurette.group > * >  section,
-	.container.featurette.group > * > .section {
+	.container.featurette.group > * > .section,
+	.container.featurette.group > * > fieldset {
 		padding: 2.5% 3%;
 	}
 }
 
 .container.brochure.group > * >  section,
-.container.brochure.group > * > .section {
+.container.brochure.group > * > .section,
+.container.brochure.group > * > fieldset {
 	padding: 2.5% 9%;
 }
 
 @media only screen and (max-width: 1280px) {
 	.container.brochure.group > * > section,
-	.container.brochure.group > * > .section {
+	.container.brochure.group > * > .section,
+	.container.brochure.group > * > fieldset {
 		padding: 2.5% 6%;
 	}
 
 	.container.brochure.group > :first-child >  section,
-	.container.brochure.group > :first-child > .section {
+	.container.brochure.group > :first-child > .section,
+	.container.brochure.group > :first-child > fieldset {
 		padding: 2.5% 3%;
 	}
 }
 
 @media only screen and (max-width: 1024px) {
 	.container.brochure.group > * >  section,
-	.container.brochure.group > * > .section {
+	.container.brochure.group > * > .section,
+	.container.brochure.group > * > fieldset {
 		padding: 2.5% 3%;
 	}
 }
 
 @media only screen and (max-width: 800px) {
 	.container.brochure.group > * > section,
-	.container.brochure.group > * > .section {
+	.container.brochure.group > * > .section,
+	.container.brochure.group > * > fieldset {
 		padding: 2.5% 6%;
 	}
 
 	.container.brochure.group > :first-child >  section,
-	.container.brochure.group > :first-child > .section {
+	.container.brochure.group > :first-child > .section,
+	.container.brochure.group > :first-child > fieldset {
 		padding: 2.5% 3%;
 	}
 }
 
 @media only screen and (max-width: 640px) {
 	.container.brochure.group > * >  section,
-	.container.brochure.group > * > .section {
+	.container.brochure.group > * > .section,
+	.container.brochure.group > * > fieldset {
 		padding: 2.5% 3%;
 	}
 }
 
 .container.catalogue.group > * >  section,
-.container.catalogue.group > * > .section {
+.container.catalogue.group > * > .section,
+.container.catalogue.group > * > fieldset {
 	padding: 2.5% 12%;
 }
 
 @media only screen and (max-width: 1366px) {
 	.container.catalogue.group > * > section,
-	.container.catalogue.group > * > .section {
+	.container.catalogue.group > * > .section,
+	.container.catalogue.group > * > fieldset {
 		padding: 2.5% 6%;
 	}
 }
 
 @media only screen and (max-width: 800px) {
 	.container.catalogue.group > * > section,
-	.container.catalogue.group > * > .section {
+	.container.catalogue.group > * > .section,
+	.container.catalogue.group > * > fieldset {
 		padding: 2.5% 6%;
 	}
 }
 
 @media only screen and (max-width: 480px) {
 	.container.catalogue.group > * > section,
-	.container.catalogue.group > * > .section {
+	.container.catalogue.group > * > .section,
+	.container.catalogue.group > * > fieldset {
 		padding: 2.5% 3%;
 	}
 }
