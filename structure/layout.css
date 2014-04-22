@@ -134,7 +134,6 @@ ol.group {
 	.featurette.group > :nth-child(2n+1) >  section,
 	.featurette.group > :nth-child(2n+1) > .section,
 	.featurette.group > :nth-child(2n+1) > fieldset {
-		clear: left;
 		padding-left: 0;
 	}
 
@@ -155,7 +154,6 @@ ol.group {
 	.brochure.group > :nth-child(3n+1) >  section,
 	.brochure.group > :nth-child(3n+1) > .section,
 	.brochure.group > :nth-child(3n+1) > fieldset {
-		clear: left;
 		padding-left: 0;
 	}
 
@@ -175,7 +173,6 @@ ol.group {
 	.catalogue.group > :nth-child(4n+1) >  section,
 	.catalogue.group > :nth-child(4n+1) > .section,
 	.catalogue.group > :nth-child(4n+1) > fieldset {
-		clear: left;
 		padding-left: 0;
 	}
 

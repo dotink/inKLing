@@ -1,3 +1,18 @@
+@media only screen and (max-width: 1600px) {
+	.featurette.group > :nth-child(3n) {
+		clear: left;
+	}
+
+	.brochure.group > :nth-child(4n) {
+		clear: left;
+	}
+
+	.catalogue.group > :nth-child(5n) {
+		clear: left;
+	}
+
+}
+
 @media only screen and (max-width: 1366px) {
 	.catalogue.group > li,
 	.catalogue.group > div {
@@ -31,10 +46,8 @@
 		width: 100%;
 	}
 
-	.brochure.group > :first-child >  section
-	.brochure.group > :first-child > .section,
-	.brochure.group > :first-child > fieldset {
-		padding: 0;
+	.brochure.group > :nth-child(2n) {
+		clear: left;
 	}
 
 	.brochure.group > :nth-child(even) >  section,
@@ -127,6 +140,7 @@
 	.brochure.group > :first-child >  section
 	.brochure.group > :first-child > .section,
 	.brochure.group > :first-child > fieldset {
+		clear: left;
 		padding: 0;
 	}
 
