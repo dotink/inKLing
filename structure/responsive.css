@@ -1,8 +1,4 @@
 @media only screen and (min-width: 1367px) {
-	.featurette.group > :nth-child(2n+1) {
-		clear: left;
-	}
-
 	.brochure.group > :nth-child(3n+1) {
 		clear: left;
 	}

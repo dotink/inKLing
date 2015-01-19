@@ -131,6 +131,10 @@ ol.group {
 		width: 50%;
 	}
 
+	.featurette.group > :nth-child(2n+1) {
+		clear: left;
+	}
+
 	.featurette.group > :nth-child(2n+1) >  section,
 	.featurette.group > :nth-child(2n+1) > .section,
 	.featurette.group > :nth-child(2n+1) > fieldset {
@@ -142,7 +146,6 @@ ol.group {
 	.featurette.group > :nth-child(2n+2) > fieldset {
 		padding-right: 0;
 	}
-
 
 .brochure.group { /** Split 33/33/33 **/ }
 
