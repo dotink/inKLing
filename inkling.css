@@ -16,12 +16,7 @@
  *-----------------------------------------------------------------------------------------------*/
 
 @import url('reset.css');
+@import url('styles/basic.css');
 
 @import url('structure/layout.css');
-@import url('structure/sections.css');
 @import url('structure/responsive.css');
-
-@import url('styles/basic.css');
-@import url('styles/headings.css');
-@import url('styles/forms.css');
-@import url('styles/tables.css');

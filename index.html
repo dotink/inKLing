@@ -1,425 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Example inkling Page</title>
-		<!--[if IE]><![endif]-->
-
-		<link rel="stylesheet" href="inkling.css" type="text/css" media="all" />
-		<link rel="stylesheet" href="themes/default.css" type="text/css" media="all" />
+		<title>inKLing - Give Your Stylesheets a Clue</title>
+		<link href="inkling.css" rel="stylesheet" />
+		<link href="themes/default.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
-
-
+			<h1 style="background-color: red;">Heading 1</h1>
 		</header>
-		<section class="group" role="main">
-				<div class="preface">
-					<h1>Welcome to inKLing</h1>
+		<section role="main">
 
-					<p class="highlight"> Starting a new site?  Try something different!</p>
-
-					<p>Unlike other modern day "bootstrap" solutions, inKLing provides a toolkit that works with you rather than you working with it.</p>
-
-					<a class="action" href="https://raw.github.com/dotink/inKLing/gh-pages/inkling.css">Download Now</a>
+			<div class="group featurette">
+				<div style="background-color: #ddd;">
+					<h2>Heading 2</h2>
 				</div>
-				<div class="principal">
-
-					<h2>Introduction</h2>
-
-					<p>The inKLing stylesheet is broken into two parts.  The first part is a combination reset, sane defaults, and opinionated base styling.  This is the base which all inKLing sites derive from and handles default structural integrity.  The second part is a theme.</p>
-
-					<aside>
-						<p>Theme's use inKLing's suggested classe names to define overall look and feel.</p>
-					</aside>
-
-
-					<p>Themes define coloring, padding/margin overrides for the structural elements, and general background colors.  Themes should not be so specific as to suggest an entire site design, but should be specific enough that they could be used to create a nice looking site rather quickly.</p>
-
-					<h2>Demonstration</h2>
-
-					<p>Below you will find various examples of what inKLing does right out of the box.  Some of the structural examples will use inline styles to clearly show what is unique on this page vs. what is included in inKLing.  You'll see how much you can get done with how little.</p>
-
-					<h3>Page Structure</h3>
-
-					<table>
-						<tr>
-							<th>Class / Element</th>
-							<th>Semantics</th>
-							<th>Commonly Used On</th>
-						</tr>
-						<tr>
-							<td><code>.group</code></td>
-							<td>Wraps elements of equal relevance (but not importance)</td>
-							<td><code>div</code>, <code>ul</code>, <code>ol</code></td>
-						</tr>
-						<tr>
-							<td><code>.preface</code></td>
-							<td>Wraps lead-in content</td>
-							<td><code>div</code>, <code>section</code></td>
-						</tr>
-						<tr>
-							<td><code>.principal</code></td>
-							<td>Wraps principle content</td>
-							<td><code>div</code>, <code>section</code></td>
-						</tr>
-						<tr>
-							<td><code>.prologue</code></td>
-							<td>Wraps afterword content</td>
-							<td><code>div</code>, <code>section</code></td>
-						</tr>
-						<tr>
-							<td><code>aside</code>, <code>.aside</code></td>
-							<td>Wraps tangentially related content</td>
-							<td><code>div</code>, <code>section</code></td>
-						</tr>
-						<tr>
-							<td><code>section</code>, <code>.section</code></td>
-							<td>Wraps contiguous headings, paragraphs, or sub-sections</td>
-							<td><code>div</code>, <code>section</code></td>
-						</tr>
-					</table>
-
-					<p>Structural classes do not provide any padding, however may use margin to be spaced against other structural elements when inside a group.  Structural elements (and their class fallbacks) provide padding </p>
-
-					<h4>Grouped Principal + Aside</h4>
-
-					<div class="group">
-						<div class="principal" style="min-height: 200px; background-color: #eee;">
-
-						</div>
-						<aside style="min-height: 100px; background-color: #ccc;">
-
-						</aside>
-					</div>
-
-					<h4>Grouped Preface + Principal</h4>
-
-					<div class="group">
-						<div class="preface" style="min-height: 150px; background-color: #888;">
-
-						</div>
-						<div class="principal" style="min-height: 200px; background-color: #eee;">
-
-						</div>
-					</div>
-
-					<h4>Grouped Preface + Principal + Aside</h4>
-
-					<div class="group">
-						<div class="preface" style="min-height: 150px; background-color: #888;">
-
-						</div>
-						<div class="principal" style="min-height: 200px; background-color: #eee;">
-
-						</div>
-						<aside style="min-height: 100px; background-color: #ccc;">
-
-						</aside>
-					</div>
-
-					<h3>Lists</h3>
-
-					<p>Lists in inKLing are expertly designed to function appropriately in standard and not-so standard circumstances.  For example:</p>
-
-					<ul>
-						<li>Nested list items are ensured to have a 1em font-size to avoid scaling down with nesting.</li>
-						<li>
-							List items containg other block level elements will adjust their margins accordingly.
-							<ul>
-								<li>
-									<p>Multiple paragraphs can easily be contained in a single list item.  This allows you to use ordered lists for purposes like legal contracts or licensing terms with different sections that are ordered.</p>
-
-									<p>Since the margin is only stripped on the last child, your paragraphs will look consistent with the rest of your document.  At the same time, your list items will not appear segregated from one another.</p>
-								</li>
-							</ul>
-						</li>
-						<li>Lists themselves have a margin that is consistent with paragraphs.</li>
-					</ul>
-
-					<h4>Grouping List Items</h4>
-
-					<p>In addition to standard lists like that above, you can also group list items by adding the <code>group</code> class directly on a <code>ul</code> or an <code>ol</code> element.</p>
-
-					<ul class="brochure group">
-						<li>
-							<section>
-								<h5>Grouped Lists Don't Have Bullets</h5>
-
-								<p>As you can see, grouped lists are nice and clean and have their bullets stripped the moment they're grouped</p>
-							</section>
-						</li>
-						<li>
-							<section>
-								<h5>Headings Have Different Margins</h5>
-
-								<p>Any headings which are in grouped list items will have their top margin removed.  This keeps the grouping nice and tight with any preceding heading.
-							</section>
-						</li>
-						<li>
-							<section>
-								<h5>Nested Lists Do the Following</h5>
-								<ul>
-									<li>Keep suitable list style positioning</li>
-									<li>
-										Maintain consistent margins
-										<ul>
-											<li>Which helps sub-sub-lists</li>
-										</ul>
-									</li>
-								</ul>
-							</section>
-						</li>
-					</ul>
-
-					<p>Because groups automatically clear, you don't need to worry about your grouped list items containing content of different lengths.  Things just keep on flowing!</p>
-
-					<h3>Other Common Groupings</h3>
-
-					<p>There are three common grouping styles in inKLing.  These use pseudo-semantic names and are designed for larger structrual elements.  Their names are designed to be partially semantic in that most of the cases they would be used, it would carry some semantic meaning to what you're displaying.</p>
-
-					<h4>Featurette</h4>
-
-					<p>A <code>.featurette.group</code> is two equal width children by default similar to what you might use to feature items in a top of page billboard</p>
-
-					<div class="featurette group">
-						<div style="min-height: 200px; background-color: #eee;">
-						</div>
-						<div style="min-height: 200px; background-color: #ddd;">
-						</div>
-					</div>
-
-
-					<h4>Brochure</h4>
-
-					<p>A <code>.brochure.group</code> is three equal width children by default similar to a tri-fold brochure.</p>
-
-					<div class="brochure group">
-						<div style="min-height: 200px; background-color: #eee;">
-						</div>
-						<div style="min-height: 200px; background-color: #ddd;">
-						</div>
-						<div style="min-height: 200px; background-color: #ccc;">
-						</div>
-					</div>
-
-					<h4>Catalogue</h4>
-
-					<p>A <code>.catalogue.group</code> is four equal width children by default similar to what you would use if you were presenting a large number of small equally important items</p>
-
-					<div class="catalogue group">
-						<div style="min-height: 200px; background-color: #eee;">
-						</div>
-						<div style="min-height: 200px; background-color: #ddd;">
-						</div>
-						<div style="min-height: 200px; background-color: #ccc;">
-						</div>
-						<div style="min-height: 200px; background-color: #bbb;">
-						</div>
-					</div>
-
-					<h3>Containers</h3>
-
-					<p>Containers (divisional elements with a class of <code>container</code>) are designed to be segregated from their surrounding content.  That is, they are considered to be elements which are "free standing" in some regards.</p>
-
-					<div class="container" style="background-color: #eee; border-radius: 1em;">
-						<h4>Container Title</h4>
-						<div class="featurette group">
-							<div>
-								<section>
-									<h5>Container Padding</h5>
-									<p>A container which is not a group will have padding applied to it so that the elements it contains are separated from it's edges.</p>
-								</section>
-							</div>
-							<div>
-								<section>
-									<h5>Not Too Special</h5>
-									<p>There is no special treatment of the elements contained within with the exception of first titles in a group adjacent to a title.  Everything else should operate as any other element would in a parent, unaware of the padding which restricts them.</p>
-								</section>
-							</div>
-						</div>
-					</div>
-
-
-					<h4>Container Groups</h4>
-
-					<p>It is also possible to add the container class to a group itself.  Unlike a mere <code>.container</code> that is not a group, a <code>.container.group</code> will have it's padding passed on to sections.</p>
-
-					<div class="container featurette group" style="border-radius: 1em;">
-						<div style="background-color: #eee;">
-							<section>
-								<h5>Padding</h5>
-								<p>You can see from this example that each section is padded individually.</p>
-							</section>
-						</div>
-						<div style="background-color: #ddd;">
-							<section>
-								<h5>Background Colors</h5>
-								<p>In addition to padding, each child element is padded heavily on the bottom with a negative matching margin, filling normally empty bottom space with the its background color, giving the impression of equal height columns.</p>
-							</section>
-						</div>
-					</div>
-
-					<h5>Additional Examples</h5>
-
-					<div class="container brochure group" style="border-radius: 1em;">
-						<div style="background-color: #eee;">
-							<section>
-								<h6>Padding</h6>
-								<p>Unlike non-contained groups which only have padding applied to some sections, container groups are assumed to have a background color, either on the container as a whole, or on the individual elements they contain.  For this reason, sections are given equal padding on both sides and some top/bottom padding as well.</p>
-							</section>
-						</div>
-						<div style="background-color: #ddd;">
-							<section>
-								<h6>Background Colors</h6>
-								<p>In addition to this, each child element is padded with a negative margin, filling normally empty bottom space with the its background color, giving the impression of equal height columns.</p>
-							</section>
-						</div>
-						<div style="background-color: #eee;">
-							<section>
-								<h6>Padding</h6>
-								<p>Unlike non-contained groups which only have padding applied to some sections, container groups are assumed to have a background color, either on the container as a whole, or on the individual elements they contain.  For this reason, sections are given equal padding on both sides and some top/bottom padding as well.</p>
-							</section>
-						</div>
-					</div>
-
-					<div class="container catalogue group" style="border-radius: 1em;">
-						<div style="background-color: #eee;">
-							<section>
-								<h6>Padding</h6>
-								<p>Unlike non-contained groups which only have padding applied to some sections, container groups are assumed to have a background color, either on the container as a whole, or on the individual elements they contain.  For this reason, sections are given equal padding on both sides and some top/bottom padding as well.</p>
-							</section>
-						</div>
-						<div style="background-color: #ddd;">
-							<section>
-								<h6>Background Colors</h6>
-								<p>In addition to this, each child element is padded with a negative margin, filling normally empty bottom space with the its background color, giving the impression of equal height columns.</p>
-							</section>
-						</div>
-						<div style="background-color: #eee;">
-							<section>
-								<h6>Padding</h6>
-								<p>Unlike non-contained groups which only have padding applied to some sections, container groups are assumed to have a background color, either on the container as a whole, or on the individual elements they contain.  For this reason, sections are given equal padding on both sides and some top/bottom padding as well.</p>
-							</section>
-						</div>
-						<div style="background-color: #ddd;">
-							<section>
-								<h6>Background Colors</h6>
-								<p>In addition to this, each child element is padded with a negative margin, filling normally empty bottom space with the its background color, giving the impression of equal height columns.</p>
-							</section>
-						</div>
-					</div>
-
-					<h3>Block Quotes</h3>
-
-					<p>Block quotes on the net tend to follow the rather ubiqitous format of having a thick left border.  This has become almost synonymous with blockquotes across the web.  That said, inKLing does not include any custom styling of block quotes outside of themes.  The default theme, however, looks something like this:</p>
-
-					<blockquote>
-						<p>
-							The production of too many useful things results in too many useless people.
-						</p>
-						<cite>- Karl Marx</cite>
-					</blockquote>
-
-					<h3>Code Blocks</h3>
-
-<pre><code>//
-//
-//
-&#39;Basic Model&#39; =&gt; function($data, $shared) {
-	$user = new User();
-	$user-&gt;setName(&#39;Matthew J. Sahagian&#39;);
-
-	assert(&#39;User::$name&#39;)
-		-&gt; using($user)
-		-&gt; equals(&#39;Matthew J. Sahagian&#39;)
-	;
-},</code></pre>
-
-					<h3>Messaging</h3>
-
-					<p class="notice">
-						This is a notice.  A notice is designed to give you additional information, but differs from a helper in that it is more informational than helpful, for example, "Images must be exactly 300x210 pixels."  It is acceptable to use a notice outside of a form, while a helper should only be used in a form to help the user complete their task.
-					</p>
-
-					<p class="helper">
-						This is a helper.  A helper supplies specific coaching text for a user, such as, "Click and drag the items to order them how you'd like."
-					</p>
-
-					<form class="alert">
-						<p>
-							This is an alert.  Alerts must provide actional items such as "continuing" or "canceling" an action and are designed to intervene when a user should be aware of something before continue an action or taking an alternative route.  The green button below has a class of <code>suggested</code>.
-						</p>
-						<button type="submit" value="continue" class="suggested">Allow</button>
-						<button value="cancel">Don't Allow</button>
-					</form>
-
-					<p class="success">
-						This is a success message.  This indicates that the previous submitted action was successful.
-					</p>
-
-					<p class="warning">
-						This is a warning message.  This indicates that the previous submitted action was successful, but you should be aware of something.
-					</p>
-
-					<p class="error">
-						This is a error message.  This indicates that the previous submitted action failed.
-					</p>
-
-					<h3>Forms</h3>
-
-					<form>
-						<div class="featurette group">
-							<div>
-								<fieldset>
-									<legend>Contact Information</legend>
-									<label>Name</label>
-									<input type="text" />
-
-									<label>E-Mail</label>
-									<input type="text" />
-
-									<label>Website</label>
-									<input type="text" />
-
-									<select>
-										<option>Phone Bit</option>
-										<option>Send Me Fliers</option>
-										<option>Ping My SMTP Server</option>
-									</select>
-								</fieldset>
-							</div>
-							<div>
-								<fieldset>
-									<label>Comment</label>
-									<textarea cols="80" rows="4"></textarea>
-
-									<label>Click here if you accept the terms of soivice <input type="checkbox" /></label>
-								</fieldset>
-
-								<fieldset>
-									<legend>I would like to</legend>
-									<label name="test">Receive a Cat <input type="radio"></label>
-									<label name="test">Shoot Flames from My Toenails <input type="radio"></label>
-									<label name="test">Destroy All Napkin Holders <input type="radio"></label>
-								</fieldset>
-							</div>
-						</div>
-
-						<button type="submit" class="suggested">Submit Button</button>
-						<button type="reset">Clear</button>
-						<a class="action">Cancel</a>
-					</form>
-
-					<h3>Before We Forget</h3>
-
-					<p class="highlight">Did we mention it's responsive<sup>n</sup></p>
+				<div style="background-color: #eee;">
+					<h2>Heading 2</h2>
+				</div>
 			</div>
+
+
+			<div class="group brochure">
+				<div style="background-color: #ddd;">
+					<h3>Heading 3</h3>
+				</div>
+				<div style="background-color: #eee;">
+					<h3>Heading 3</h3>
+				</div>
+				<div style="background-color: #ccc;">
+					<h3>Heading 3</h3>
+				</div>
+			</div>
+
+
+			<div class="group catalogue">
+				<div style="background-color: #ddd;">
+					<h4>Heading 4</h4>
+				</div>
+				<div style="background-color: #eee;">
+					<h4>Heading 4</h4>
+				</div>
+				<div style="background-color: #ccc;">
+					<h4>Heading 4</h4>
+				</div>
+				<div style="background-color: #fff;">
+					<h4>Heading 4</h4>
+				</div>
+			</div>
+
+
+			<div class="group container featurette" style="border: solid 1px #000; width: calc(100% - 2px)">
+				<div style="background-color: #ddd; border-left: solid 1px #222; margin-left: -1px;">
+					<h2>Heading 2</h2>
+					<p>
+						This is a test.  Things should look up from here.
+					</p>
+				</div>
+				<div style="background-color: #eee; border-left: solid 1px #222; margin-left: -1px;">
+					<h2>Heading 2</h2>
+				</div>
+			</div>
+
+
+			<div class="group container brochure" style="border: solid 1px #000; width: calc(100% - 2px)">
+				<div style="background-color: #ddd; border-left: solid 1px #222; margin-left: -1px;">
+					<h3>Heading 3</h3>
+					<p>
+						This is a test.  Things should look up from here.
+					</p>
+				</div>
+				<div style="background-color: #eee; border-left: solid 1px #222; margin-left: -1px;">
+					<h3>Heading 3</h3>
+				</div>
+				<div style="background-color: #ccc; border-left: solid 1px #222; margin-left: -1px;">
+					<h3>Heading 3</h3>
+				</div>
+			</div>
+
+
+			<div class="group container catalogue" style="border: solid 1px #000; width: calc(100% - 2px)">
+				<div style="background-color: #ddd; border-left: solid 1px #222; margin-left: -1px;">
+					<h4>Heading 4</h4>
+					<p>
+						This is a test.  Things should look up from here.
+					</p>
+				</div>
+				<div style="background-color: #eee; border-left: solid 1px #222; margin-left: -1px;">
+					<h4>Heading 4</h4>
+				</div>
+				<div style="background-color: #ccc; border-left: solid 1px #222; margin-left: -1px;">
+					<h4>Heading 4</h4>
+				</div>
+				<div style="background-color: #fff; border-left: solid 1px #222; margin-left: -1px;">
+					<h4>Heading 4</h4>
+					<p>
+						This is a test.  Things should look up from here.
+					</p>
+				</div>
+			</div>
+
+			<form>
+				<label>Some Text</label>
+				<input type="text" />
+
+				<label>A Password</label>
+				<input type="password" />
+
+				<label>File Time</label>
+				<input type="file" />
+
+				<input id="test" type="checkbox" /><label for="test"> testing this now</label>
+
+				<input id="test2" type="radio" /><label for="test2"> testing this radio</label>
+			</form>
 		</section>
 		<footer>
 
 		</footer>
-
 	</body>
 </html>
-

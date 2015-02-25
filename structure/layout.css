@@ -1,186 +1,96 @@
-/*------------------------------------------------------------------------------------------------
- | Structures
- *-----------------------------------------------------------------------------------------------*/
+body > section,
+body > header,
+body > footer {
+	padding: 1rem 10%;
+}
 
-.group {
-	clear: both;
+body > section > *,
+body > header  > *,
+body > footer  > * {
+	margin: 0 auto;
 }
 
 .group:after {
-	content: ".";
-	display: block;
-	height: 0;
+	content: '';
+	display: table;
 	clear: both;
-	visibility: hidden;
-	overflow: hidden;
 }
 
-* html .group {
-	height: 1%;
+.group {
+	width: calc(100% + 6rem);
 }
 
-*:first-child+html .group {
-	min-height: 1px;
-}
-
-.group > li,
-.group > div {
+.group > * {
 	float: left;
 }
 
-.container {
+.group.container {
+	width: 100%;
 	overflow: hidden;
-	margin: 2em 0;
 }
 
-.container.group >  li,
-.container.group >  div,
-.container.group >  aside,
-.container.group > .preface,
-.container.group > .prologue {
-	padding-bottom: 5000px;
-	margin-bottom: -5000px;
+.group.container > * {
+	margin-bottom: -100rem;
 }
 
-ul.group,
-ol.group {
-	list-style: none;
+.group.container > *:after {
+	display: block;
+	height: 100rem;
+	content: ' ';
+}
+
+/*
+ * Featurettes
+ */
+.group.featurette > * {
+	width: calc(50% - 6rem);
+	margin-left: 6rem;
+}
+
+.group.featurette > :nth-child(2n+1) {
 	margin-left: 0;
+	clear: left;
 }
 
-.group > li {
+.group.container.featurette > * {
+	width: calc(50% - 6rem);
+	padding: 3rem;
+}
+
+
+/*
+ * Brochure
+ */
+.group.brochure > * {
+	width: calc(33.3334% - 6rem);
+	margin-left: 6rem;
+}
+
+.group.brochure > :nth-child(3n+1) {
 	margin-left: 0;
+	clear: left;
 }
 
-/*------------------------------------------------------------------------------------------------
- | Extended Structures
- *-----------------------------------------------------------------------------------------------*/
-
-	.group > .preface {
-		width: 27.5%;
-	}
-
-	.group > .principal {
-		width: 70%;
-		margin-left: 2.5%;
-	}
-
-	.group > .principal:first-child {
-		margin-left: 0;
-	}
+.group.container.brochure > * {
+	width: calc(33.3334% - 6rem);
+	padding: 3rem;
+}
 
 
-	p +  aside,
-	p + .aside {
-		margin-top: -1%;
-		width: 35%;
-		float: right;
-		margin: -1% 0 3% 1em;
-		padding: .5em 1em;
-	}
+/*
+ * Catalogues
+ */
+.group.catalogue > * {
+	width: calc(25% - 6rem);
+	margin-left: 6rem;
+}
 
-	.group >  aside,
-	.group > .aside,
-	.group > .prologue {
-		width: 27.5%;
-		float: right;
-	}
+.group.catalogue > :nth-child(4n+1) {
+	margin-left: 0;
+	clear: left;
+}
 
-	.group > .preface + .principal {
-		width: 45%;
-	}
-
-	.group > .preface + .principal +  aside,
-	.group > .preface + .principal + .aside,
-	.group > .preface + .principal + .prologue {
-		width: 22.5%;
-	}
-
-	.group > .preface + .principal:last-child {
-		width: 70%;
-	}
-
-		.group > * >  section,
-		.group > * > .section,
-		.group > * > fieldset {
-			padding: 0 5%;
-		}
-
-		.group > aside     >  section,
-		.group > aside     > .section,
-		.group > .preface  >  section,
-		.group > .preface  > .section,
-		.group > .prologue >  section,
-		.group > .prologue > .section, {
-			padding: 5%;
-		}
-
-		.container {
-			padding: 1.5% 3%;
-		}
-
-		.container.group {
-			padding: 0;
-		}
-
-
-.featurette.group { /** Split 50/50 **/ }
-
-	.featurette.group > li,
-	.featurette.group > div {
-		width: 50%;
-	}
-
-	.featurette.group > :nth-child(2n+1) {
-		clear: left;
-	}
-
-	.featurette.group > :nth-child(2n+1) >  section,
-	.featurette.group > :nth-child(2n+1) > .section,
-	.featurette.group > :nth-child(2n+1) > fieldset {
-		padding-left: 0;
-	}
-
-	.featurette.group > :nth-child(2n+2) >  section,
-	.featurette.group > :nth-child(2n+2) > .section,
-	.featurette.group > :nth-child(2n+2) > fieldset {
-		padding-right: 0;
-	}
-
-.brochure.group { /** Split 33/33/33 **/ }
-
-	.brochure.group > li,
-	.brochure.group > div {
-		width: 33.333%;
-	}
-
-	.brochure.group > :nth-child(3n+1) >  section,
-	.brochure.group > :nth-child(3n+1) > .section,
-	.brochure.group > :nth-child(3n+1) > fieldset {
-		padding-left: 0;
-	}
-
-	.brochure.group > :nth-child(3n+3) >  section,
-	.brochure.group > :nth-child(3n+3) > .section,
-	.brochure.group > :nth-child(3n+3) > fieldset {
-		padding-right: 0;
-	}
-
-.catalogue.group { /** Split 25/25/25/25 **/ }
-
-	.catalogue.group > li,
-	.catalogue.group > div {
-		width: 25%;
-	}
-
-	.catalogue.group > :nth-child(4n+1) >  section,
-	.catalogue.group > :nth-child(4n+1) > .section,
-	.catalogue.group > :nth-child(4n+1) > fieldset {
-		padding-left: 0;
-	}
-
-	.catalogue.group > :nth-child(4n+4) >  section,
-	.catalogue.group > :nth-child(4n+4) > .section,
-	.catalogue.group > :nth-child(4n+4) > fieldset {
-		padding-right: 0;
-	}
+.group.container.catalogue > * {
+	width: calc(25% - 6rem);
+	padding: 3rem;
+}

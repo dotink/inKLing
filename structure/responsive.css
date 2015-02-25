@@ -1,319 +1,84 @@
-@media only screen and (min-width: 1367px) {
-	.brochure.group > :nth-child(3n+1) {
-		clear: left;
-	}
-
-	.catalogue.group > :nth-child(4n+1) {
-		clear: left;
-	}
-
-}
-
-@media only screen and (max-width: 1366px) {
-	.catalogue.group > li,
-	.catalogue.group > div {
-		width: 50%;
-	}
-
-	.catalogue.group > :nth-child(2n+1) {
-		clear: left;
-	}
-
-	.catalogue.group > :nth-child(even) >  section,
-	.catalogue.group > :nth-child(even) > .section,
-	.catalogue.group > :nth-child(even) > fieldset {
-		padding-left: 0;
-	}
-
-	.catalogue.group > :nth-child(odd) >  section,
-	.catalogue.group > :nth-child(odd) > .section,
-	.catalogue.group > :nth-child(odd) > fieldset {
-		padding-right: 0;
+@media (max-width: 3200) {
+	html {
+		font-size: 14px;
 	}
 }
 
-@media only screen and (max-width: 1280px) {
-	.brochure.group > li,
-	.brochure.group > div {
-		width: 50%;
-	}
-
-	.brochure.group > :first-child {
-		width: 100%;
-	}
-
-	.brochure.group > :nth-child(2n) {
-		clear: left;
-	}
-
-	.brochure.group > :nth-child(even) >  section,
-	.brochure.group > :nth-child(even) > .section,
-	.brochure.group > :nth-child(even) > fieldset {
-		padding-left: 0;
-	}
-
-	.brochure.group > :nth-child(odd) >  section,
-	.brochure.group > :nth-child(odd) > .section,
-	.brochure.group > :nth-child(odd) > fieldset {
-		padding-right: 0;
+@media (max-width: 2400px) {
+	html {
+		font-size: 12px;
 	}
 }
 
-@media only screen and (max-width: 1024px) {
-	.group > .principal {
-		width: 60%;
-	}
-
-	.group >  aside,
-	.group > .aside {
-		width: 37.5%;
-	}
-
-	.featurette.group > li,
-	.featurette.group > div {
-		width: 100%;
-	}
-
-	.brochure.group > li,
-	.brochure.group > div {
-		width: 100%;
-	}
-
-	.featurette.group  > * >  section,
-	.featurette.group  > * > .section,
-	.featurette.group  > * > fieldset,
-	.brochure.group    > * >  section,
-	.brochure.group    > * > .section,
-	.brochure.group    > * > fieldset {
-		padding: 0;
+@media (max-width: 1600px) {
+	html {
+		font-size: 10px;
 	}
 }
 
-@media only screen and (max-width: 800px) {
-	.group > .preface {
-		width: 100%;
+@media (max-width: 1280px) {
+	html {
+		font-size: 8px;
 	}
 
-	.group > .principal {
-		width: 100%;
-	}
-
-	.group > .preface + .principal {
-		width: 100%;
+	/*
+	 * Featurettes
+	 */
+	.group.featurette > * {
+		width: calc(100% - 6rem);
 		margin-left: 0;
 	}
 
-	.group > .preface + .principal:last-child {
-		width: 100%;
-	}
-
-	.group >  aside,
-	.group > .aside,
-	.group > .prologue {
-		width: 100%;
-	}
-
-	.group > .preface + .principal +  aside,
-	.group > .preface + .principal + .aside,
-	.group > .preface + .principal + .prologue {
-		width: 100%;
-	}
-
-	.featurette.group > li,
-	.featurette.group > div {
-		width: 50%;
-	}
-
-	.brochure.group > li,
-	.brochure.group > div {
-		width: 50%;
-	}
-
-	.brochure.group > :first-child {
-		width: 100%;
-	}
-
-	.brochure.group > :first-child >  section
-	.brochure.group > :first-child > .section,
-	.brochure.group > :first-child > fieldset {
-		clear: left;
-		padding: 0;
-	}
-
-	.brochure.group > :nth-child(even) >  section,
-	.brochure.group > :nth-child(even) > .section,
-	.brochure.group > :nth-child(even) > fieldset {
-		padding-left: 0;
-	}
-
-	.catalogue.group > li,
-	.catalogue.group > div {
-		width: 50%;
-	}
-
-	.catalogue.group > :nth-child(2n+1) {
-		clear: left;
-	}
-
-	.catalogue.group > :nth-child(even) >  section,
-	.catalogue.group > :nth-child(even) > .section,
-	.catalogue.group > :nth-child(even) > fieldset {
-		padding-left: 0;
-	}
-
-
-	.catalogue.group > :nth-child(odd) >  section,
-	.catalogue.group > :nth-child(odd) > .section,
-	.catalogue.group > :nth-child(odd) > fieldset {
-		padding-right: 0;
+	.group.container.featurette > * {
+		width: calc(100% - 6rem);
+		padding: 3rem;
 	}
 }
 
-
-@media only screen and (max-width: 640px) {
-	p + aside,
-	p + .aside {
-		width: auto;
+@media (max-width: 1024px) {
+	/*
+	 * Brochures
+	 */
+	.group.brochure > * {
+		width: calc(100% - 6rem);
 		margin-left: 0;
 	}
 
-	.featurette.group > li,
-	.featurette.group > div {
-		width: 100%;
+	.group.container.brochure > * {
+		width: calc(100% - 6rem);
+		padding: 3rem;
 	}
 
-	.brochure.group > li,
-	.brochure.group > div {
-		width: 100%;
+	/*
+	 * Catalogues
+	 */
+	.group.catalogue > * {
+		width: calc(50% - 6rem);
+		margin-left: 6rem;
 	}
 
-	.featurette.group  > * > .section,
-	.featurette.group  > * >  section,
-	.brochure.group    > * > .section,
-	.brochure.group    > * >  section {
-		padding: 0;
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.catalogue.group > li,
-	.catalogue.group > div {
-		width: 100%;
+	.group.catalogue > :nth-child(2n+1) {
+		margin-left: 0;
+		clear: both;
 	}
 
-	.group > * >  section,
-	.group > * > .section {
-		padding: 0;
+	.group.container.catalogue > * {
+		width: calc(50% - 6rem);
+		padding: 3rem;
 	}
 }
 
-
-.container.featurette.group > * >  section,
-.container.featurette.group > * > .section,
-.container.featurette.group > * > fieldset {
-	padding: 2.5% 6%;
-}
-
-@media only screen and (max-width: 1024px) {
-	.container.featurette.group > * >  section,
-	.container.featurette.group > * > .section,
-	.container.featurette.group > * > fieldset {
-		padding: 2.5% 3%;
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	.container.featurette.group > * >  section,
-	.container.featurette.group > * > .section,
-	.container.featurette.group > * > fieldset {
-		padding: 2.5% 6%;
-	}
-}
-
-@media only screen and (max-width: 640px) {
-	.container.featurette.group > * >  section,
-	.container.featurette.group > * > .section,
-	.container.featurette.group > * > fieldset {
-		padding: 2.5% 3%;
-	}
-}
-
-.container.brochure.group > * >  section,
-.container.brochure.group > * > .section,
-.container.brochure.group > * > fieldset {
-	padding: 2.5% 9%;
-}
-
-@media only screen and (max-width: 1280px) {
-	.container.brochure.group > * > section,
-	.container.brochure.group > * > .section,
-	.container.brochure.group > * > fieldset {
-		padding: 2.5% 6%;
+@media (max-width: 800px) {
+	/*
+	 * Catalogues
+	 */
+	.group.catalogue > * {
+		width: calc(100% - 6rem);
+		margin-left: 0;
 	}
 
-	.container.brochure.group > :first-child >  section,
-	.container.brochure.group > :first-child > .section,
-	.container.brochure.group > :first-child > fieldset {
-		padding: 2.5% 3%;
-	}
-}
-
-@media only screen and (max-width: 1024px) {
-	.container.brochure.group > * >  section,
-	.container.brochure.group > * > .section,
-	.container.brochure.group > * > fieldset {
-		padding: 2.5% 3%;
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	.container.brochure.group > * > section,
-	.container.brochure.group > * > .section,
-	.container.brochure.group > * > fieldset {
-		padding: 2.5% 6%;
-	}
-
-	.container.brochure.group > :first-child >  section,
-	.container.brochure.group > :first-child > .section,
-	.container.brochure.group > :first-child > fieldset {
-		padding: 2.5% 3%;
-	}
-}
-
-@media only screen and (max-width: 640px) {
-	.container.brochure.group > * >  section,
-	.container.brochure.group > * > .section,
-	.container.brochure.group > * > fieldset {
-		padding: 2.5% 3%;
-	}
-}
-
-.container.catalogue.group > * >  section,
-.container.catalogue.group > * > .section,
-.container.catalogue.group > * > fieldset {
-	padding: 2.5% 12%;
-}
-
-@media only screen and (max-width: 1366px) {
-	.container.catalogue.group > * > section,
-	.container.catalogue.group > * > .section,
-	.container.catalogue.group > * > fieldset {
-		padding: 2.5% 6%;
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	.container.catalogue.group > * > section,
-	.container.catalogue.group > * > .section,
-	.container.catalogue.group > * > fieldset {
-		padding: 2.5% 6%;
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.container.catalogue.group > * > section,
-	.container.catalogue.group > * > .section,
-	.container.catalogue.group > * > fieldset {
-		padding: 2.5% 3%;
+	.group.container.catalogue > * {
+		width: calc(100% - 6rem);
+		padding: 3rem;
 	}
 }
